@@ -22,9 +22,16 @@
 
     </head>
 
-<body>
-    <nav class="nav">
-        <img src="/img/nav_logo.png" height="45px" alt="logo" />
+<body onmouseover="test()">
+    
+    <nav class="nav" id="nav">
+        <img src="/img/nav_logo.png" height="45px" alt="logo" id="logo"/>
+
+        <div class="rect" id="diamond">
+        </div>
+    </nav>
+
+        
     </nav>
     
     <main>
@@ -48,12 +55,15 @@
                             <i class="fa-regular fa-gas-pump"></i>Diesel
                         </div>
                         <div class="stats-half" id="seats">
-                            <i class="fa-solid fa-person"></i>5
+                            <div class="seats">
+                                <i class="fa-solid fa-person"></i>5
+                            </div>
+                            <div class="hp">
+                                <i>HP</i>239
+                            </div>
+
                         </div>
-                        <div class="stats-half" id="hp">
-                            <i>HP</i>239
-                        </div>
-                    </div>
+                    
 
                     <div class="cena">
                         2520zł
@@ -61,8 +71,9 @@
                     
                 </div>
             </div>
+            </div>
 
-                <div class="card-group" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
+                <!-- <div class="card-group" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
                 id="polo"
                 >
                     <div class="card" id="p1">
@@ -75,7 +86,7 @@
                     <div class="card" id="p3">
                         <div class="stats-group">
                             <div class="stats">
-                                <i class="fas fa-engine"></i>15019 HP
+                                <i class="fas fa-engine"></i>1.4L
                             </div>
                             <div class="stats">
                                 <i class="fa-regular fa-gas-pump"></i>Benzyna
@@ -84,7 +95,7 @@
                                 <i class="fa-solid fa-person"></i>5
                             </div>
                             <div class="stats-half" id="hp">
-                                <i>HP</i>239
+                                <i>HP</i>740
                             </div>
                         </div>
     
@@ -93,24 +104,89 @@
                         </div>
                         
                     </div>
-                </div>
+                </div> -->
+                <!-- <div class="card-group" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
+                id="polo"
+                >
+                    <div class="card" id="p1">
+                        <img src="/img/cars/polo_1.png">
+                    </div>
+                    <div class="card" id="p2">
+                        <img src="/img/cars/polo_2.png">
+                    </div>
+                    
+                    <div class="card" id="p3">
+                        <div class="stats-group">
+                            <div class="stats">
+                                <i class="fas fa-engine"></i>1.4L
+                            </div>
+                            <div class="stats">
+                                <i class="fa-regular fa-gas-pump"></i>Benzyna
+                            </div>
+                            <div class="stats-half" id="seats">
+                                <i class="fa-solid fa-person"></i>5
+                            </div>
+                            <div class="stats-half" id="hp">
+                                <i>HP</i>740
+                            </div>
+                        </div>
+    
+                        <div class="cena">
+                            2520zł
+                        </div>
+                        
+                    </div>-->
+
             
         </section>
     </main>
     <script>
+        function test() {
+            var height = window.pageYOffset;
+            var nav = document.getElementById('nav');
+            var diamond = document.getElementById('diamond');
+            var logo = document.getElementById('logo');
+
+            
+
+            if (height >= 400) {
+                nav.classList.replace('nav','nav-alt');
+                diamond.style.display = "block";
+                logo.style.display = "none";
+                
+                
+            }
+            else {
+                nav.classList.replace('nav-alt','nav');
+                diamond.style.display = "none";
+                logo.style.display = "block";
+                
+            }
+
+
+
+        } 
+        window.setInterval(test(), 0);
+
         function touran_hover() {
             var t1 = document.getElementById('t1');
             var t2 = document.getElementById('t2');
+            var t3 = document.getElementById('t3');
 
             t1.classList.add("cardhovert1");
             t2.classList.add("cardhovert2");
+            t3.style.transition = "all 0.5s";
+            t3.style.zIndex = "5";
         }
         function touran_unhover() {
             var t1 = document.getElementById('t1');
             var t2 = document.getElementById('t2');
+            var t3 = document.getElementById('t3');
 
             t1.classList.remove("cardhovert1");
             t2.classList.remove("cardhovert2");
+            t3.style.transition = "all 0.1s";
+            t3.style.zIndex = "3";
         }
 
         function polo_hover() {
