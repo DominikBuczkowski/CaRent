@@ -22,7 +22,7 @@ body {
     border: 1px solid white;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     
 }
@@ -30,9 +30,6 @@ main {
     padding-top: 65px;
 }
 .card-group {
-    position: absolute;
-    top: 20%;
-    left: calc(50% - 100px);
 }
 .card {
     width: 200px;
@@ -41,8 +38,12 @@ main {
     background-color: white;
     z-index: 5;
     transition: 1s all;
-    
-    
+}
+sub {
+    font-size: 10px;
+    position: absolute;
+    right: 18px;
+    top: 5px;
 }
 #t1 {
     z-index: 5;
@@ -57,17 +58,38 @@ main {
     display: flex;
     justify-content: center;
     position: absolute;
+    background-image: url('/img/cars/showroom.png');
 }
 #t3 {
     z-index: 3;
     position: relative;
 }
+
+#p1 {
+    z-index: 5;
+    background-image: url('/img/cars/showroom.png');
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    
+}
+#p2 {
+    z-index: 4;
+    display: flex;
+    background-image: url('/img/cars/showroom.png');
+    justify-content: center;
+    position: absolute;
+}
+#p3 {
+    z-index: 3;
+    position: relative;
+}
+
 .stats {
     width: calc(100% - 20px);
     padding: 10px;
     border-radius: 10px;
     font-size: 29px;
-    background-color: red;
 }
 .stats i {
     color:black;
@@ -91,18 +113,17 @@ main {
 }
 .cena {
     width: calc(100% - 20px);
-    background-color: cadetblue;
     padding: 10px;
     border-radius: 10px;
     font-size: 29px;
 }
 
 .cardhovert1 {
-    transform: translate(-220px, 22px) rotate(-15deg);
+    transform: translate(-220px, 22px) rotate(-15deg) rotateY(180deg);
     transition: 1s all;
 }
 .cardhovert2 {
-    transform: translate(220px, 22px) rotate(15deg);
+    transform: translate(220px, 22px) rotate(15deg) rotateY(180deg) rotateZ(180deg);
     transition: 1s all;
 }
 .cardhover {

@@ -23,11 +23,15 @@
     </head>
 
 <body>
-    <nav class="nav"><img src="/img/nav_logo.png" height="45px" alt="logo" /></nav>
+    <nav class="nav">
+        <img src="/img/nav_logo.png" height="45px" alt="logo" />
+    </nav>
     
     <main>
         <section class="our-cars-cards">
-            <div class="card-group" onmouseover="touran_hover()" onmouseleave="touran_unhover()">
+            <div class="card-group" onmouseover="touran_hover()" onmouseleave="touran_unhover()"
+            id="touran"
+            >
                 <div class="card" id="t1">
                     <img src="/img/cars/touran_1.png">
                 </div>
@@ -38,7 +42,7 @@
                 <div class="card" id="t3">
                     <div class="stats-group">
                         <div class="stats">
-                            <i class="fas fa-engine"></i>15019 HP
+                            <i class="fas fa-engine"></i>2.0L TDI<sub>turbo nie działa</sub>
                         </div>
                         <div class="stats">
                             <i class="fa-regular fa-gas-pump"></i>Diesel
@@ -57,6 +61,39 @@
                     
                 </div>
             </div>
+
+                <div class="card-group" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
+                id="polo"
+                >
+                    <div class="card" id="p1">
+                        <img src="/img/cars/polo_1.png">
+                    </div>
+                    <div class="card" id="p2">
+                        <img src="/img/cars/polo_2.png">
+                    </div>
+                    
+                    <div class="card" id="p3">
+                        <div class="stats-group">
+                            <div class="stats">
+                                <i class="fas fa-engine"></i>15019 HP
+                            </div>
+                            <div class="stats">
+                                <i class="fa-regular fa-gas-pump"></i>Benzyna
+                            </div>
+                            <div class="stats-half" id="seats">
+                                <i class="fa-solid fa-person"></i>5
+                            </div>
+                            <div class="stats-half" id="hp">
+                                <i>HP</i>239
+                            </div>
+                        </div>
+    
+                        <div class="cena">
+                            2520zł
+                        </div>
+                        
+                    </div>
+                </div>
             
         </section>
     </main>
@@ -74,6 +111,21 @@
 
             t1.classList.remove("cardhovert1");
             t2.classList.remove("cardhovert2");
+        }
+
+        function polo_hover() {
+            var p2 = document.getElementById('p2');
+            var p1 = document.getElementById('p1');
+
+            p1.classList.add("cardhovert1");
+            p2.classList.add("cardhovert2");
+        }
+        function polo_unhover() {
+            var p1 = document.getElementById('p1');
+            var p2 = document.getElementById('p2');
+
+            p1.classList.remove("cardhovert1");
+            p2.classList.remove("cardhovert2");
         }
     </script>
     
