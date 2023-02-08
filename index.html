@@ -26,9 +26,42 @@
     
     <main>
         <section class="our-cars-cards">
-            TU MAJA BYĆ KARTY AUT?
+            <div class="card-group" onmouseover="t1hover()" onmouseleave="t1unhover()">
+                <div class="card" id="t1">
+                    <img src="/img/cars/touran_1.png">
+                </div>
+                <div class="card" id="t2" onmouseover="t2hover()" onmouseleave="t2unhover()">
+                    <img src="/img/cars/touran_1.jpg">
+                </div>
+                <div class="card" id="t3">
+                    <img src="/img/cars/touran_1.png">
+                </div>
+            </div>
         </section>
     </main>
+    <script>
+        function t1hover() {
+            var t1 = document.getElementById('t1');
+
+            t1.classList.add("cardhovert1");
+        }
+        function t1unhover() {
+            var t1 = document.getElementById('t1');
+
+            t1.classList.remove("cardhovert1");
+        }
+
+        function t2hover() {
+            var t2 = document.getElementById('t2');
+
+            t2.classList.add("cardhovert2");
+        }
+        function t2unhover() {
+            var t2 = document.getElementById('t2');
+
+            t2.classList.remove("cardhovert2");
+        }
+    </script>
     
 </body>
 </html>

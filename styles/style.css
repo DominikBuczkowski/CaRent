@@ -14,11 +14,64 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 .our-cars-cards {
-    margin-top: 70px;
     height: 500px;
     width: calc(100% - 10px);
     border: 1px solid white;
-    font-size: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+main {
+    padding-top: 65px;
+}
+.card-group {
+    position: absolute;
+    top: 20%;
+    left: calc(50% - 100px);
+}
+.card {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    
+    
+}
+#t1 {
+    z-index: 5;
+    transition: 1s all;
+}
+#t2 {
+    z-index: 4;
+}
+#t3 {
+    z-index: 3;
+}
+
+.cardhovert1 {
+    transform: translateX(-220px);
+    transition: 1s all;
+}
+.cardhovert2 {
+    transform: translateX(220px);
+    transition: 1s all;
+}
+.cardhover {
+    z-index: 4;
+}
+.cardhover {
+    z-index: 3;
+}
+
+.card img {
+    width: 90%;
 }
