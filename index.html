@@ -14,6 +14,7 @@
 
 
         <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,39 +27,52 @@
     
     <main>
         <section class="our-cars-cards">
-            <div class="card-group" onmouseover="t1hover()" onmouseleave="t1unhover()">
+            <div class="card-group" onmouseover="touran_hover()" onmouseleave="touran_unhover()">
                 <div class="card" id="t1">
                     <img src="/img/cars/touran_1.png">
                 </div>
-                <div class="card" id="t2" onmouseover="t2hover()" onmouseleave="t2unhover()">
+                <div class="card" id="t2">
                     <img src="/img/cars/touran_1.jpg">
                 </div>
+                
                 <div class="card" id="t3">
-                    <img src="/img/cars/touran_1.png">
+                    <div class="stats-group">
+                        <div class="stats">
+                            <i class="fas fa-engine"></i>15019 HP
+                        </div>
+                        <div class="stats">
+                            <i class="fa-regular fa-gas-pump"></i>Diesel
+                        </div>
+                        <div class="stats-half" id="seats">
+                            <i class="fa-solid fa-person"></i>5
+                        </div>
+                        <div class="stats-half" id="hp">
+                            <i>HP</i>239
+                        </div>
+                    </div>
+
+                    <div class="cena">
+                        2520zł
+                    </div>
+                    
                 </div>
             </div>
+            
         </section>
     </main>
     <script>
-        function t1hover() {
+        function touran_hover() {
             var t1 = document.getElementById('t1');
+            var t2 = document.getElementById('t2');
 
             t1.classList.add("cardhovert1");
-        }
-        function t1unhover() {
-            var t1 = document.getElementById('t1');
-
-            t1.classList.remove("cardhovert1");
-        }
-
-        function t2hover() {
-            var t2 = document.getElementById('t2');
-
             t2.classList.add("cardhovert2");
         }
-        function t2unhover() {
+        function touran_unhover() {
+            var t1 = document.getElementById('t1');
             var t2 = document.getElementById('t2');
 
+            t1.classList.remove("cardhovert1");
             t2.classList.remove("cardhovert2");
         }
     </script>

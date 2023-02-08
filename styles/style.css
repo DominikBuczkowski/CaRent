@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Play', sans-serif;
     background-color: black;
-    color: rgb(163, 73, 164);
     height: 1500px;
 }
 .nav {
@@ -16,6 +15,7 @@ body {
     align-items: center;
     z-index: 100;
 }
+
 .our-cars-cards {
     height: 500px;
     width: calc(100% - 10px);
@@ -39,38 +39,76 @@ main {
     height: 250px;
     border-radius: 10px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    position: absolute;
     z-index: 5;
+    transition: 1s all;
     
     
 }
 #t1 {
     z-index: 5;
-    transition: 1s all;
+    background-image: url('/img/cars/showroom.png');
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    
 }
 #t2 {
     z-index: 4;
+    display: flex;
+    justify-content: center;
+    position: absolute;
 }
 #t3 {
     z-index: 3;
+    position: relative;
+}
+.stats {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 29px;
+    background-color: red;
+}
+.stats i {
+    color:black;
+    font-size: 29px;
+    margin-right: 10px;
+}
+.stats-half {
+    width: calc(60% - 20px);
+    float: left;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 29px;
+}
+#seats {
+    width: calc(40% - 20px);
+}
+.stats-half i {
+    color:black;
+    font-size: 29px;
+    margin-right: 10px;
+}
+.cena {
+    width: calc(100% - 20px);
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 29px;
 }
 
 .cardhovert1 {
-    transform: translateX(-220px);
+    transform: translate(-220px, 22px) rotate(-15deg);
     transition: 1s all;
 }
 .cardhovert2 {
-    transform: translateX(220px);
+    transform: translate(220px, 22px) rotate(15deg);
     transition: 1s all;
 }
 .cardhover {
     z-index: 4;
 }
-.cardhover {
-    z-index: 3;
-}
+
 
 .card img {
     width: 90%;
