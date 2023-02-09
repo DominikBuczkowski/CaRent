@@ -35,140 +35,56 @@
     </nav>
     
     <main>
-        <section class="our-cars-cards">
-            <div class="card-group" onmouseover="touran_hover()" onmouseleave="touran_unhover()"
-            id="touran" onclick="next()"
-            >
-                <div class="card" id="t1">
-                    <img src="/img/cars/touran_1.png">
+        <section class="our-cars-cards" >
+            
+            <div class="prev-button">
+                <button id="prev-button" onclick="handlePrevClick()">PREVIOUS</button>
+            </div>
+
+            <div class="next-button">
+                <button id="next-button">BEXT</button>
+            </div>
+
+            <div class="card-group">
+                <div class="card">
+                    ABC
                 </div>
-                <div class="card" id="t2">
+
+                <div class="card">
                     <img src="/img/cars/touran_1.jpg">
                 </div>
+
+                <div class="card">
+                    <img src="/img/cars/touran_1.png">
+                </div>
                 
-                <div class="card" id="t3">
-                    <div class="stats-group">
-                        <div class="stats">
-                            <i class="fas fa-engine"></i>2.0L TDI<sub>turbo nie działa</sub>
-                        </div>
-                        <div class="stats">
-                            <i class="fa-regular fa-gas-pump"></i>Diesel
-                        </div>
-                        <div class="stats-half" id="seats">
-                            <div class="seats">
-                                <i class="fa-solid fa-person"></i>5
-                            </div>
-                            <div class="hp">
-                                <i>HP</i>239
-                            </div>
-
-                        </div>
-                    
-
-                    <div class="cena">
-                        2520zł
-                    </div>
-                    
-                </div>
             </div>
-            </div>
+            
 
-                <div class="card-group-next" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
-                id="polo" 
-                >
-                    <div class="card" id="p1">
-                        <img src="/img/cars/polo_1.png">
-                    </div>
-                    <div class="card" id="p2">
-                        <img src="/img/cars/polo_2.png">
-                    </div>
-                    
-                    <div class="card" id="p3">
-                        <div class="stats-group">
-                            <div class="stats">
-                                <i class="fas fa-engine"></i>1.4L
-                            </div>
-                            <div class="stats">
-                                <i class="fa-regular fa-gas-pump"></i>Benzyna
-                            </div>
-                            <div class="stats-half" id="seats">
-                            <div class="seats">
-                                <i class="fa-solid fa-person"></i>5
-                            </div>
-                            <div class="hp">
-                                <i>HP</i>1800
-                            </div>
+                        
 
-                        </div>
-    
-                        <div class="cena">
-                            2520zł
-                        </div>
-                        
-                    </div>
-                </div>
-                <!-- <div class="card-group" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
-                id="polo"
-                >
-                    <div class="card" id="p1">
-                        <img src="/img/cars/polo_1.png">
-                    </div>
-                    <div class="card" id="p2">
-                        <img src="/img/cars/polo_2.png">
-                    </div>
-                    
-                    <div class="card" id="p3">
-                        <div class="stats-group">
-                            <div class="stats">
-                                <i class="fas fa-engine"></i>1.4L
-                            </div>
-                            <div class="stats">
-                                <i class="fa-regular fa-gas-pump"></i>Benzyna
-                            </div>
-                            <div class="stats-half" id="seats">
-                                <i class="fa-solid fa-person"></i>5
-                            </div>
-                            <div class="stats-half" id="hp">
-                                <i>HP</i>740
-                            </div>
-                        </div>
-    
-                        <div class="cena">
-                            2520zł
-                        </div>
-                        
-                    </div>-->
 
             
         </section>
     </main>
     <script>
-        let number = 1;
+            let activeIndex = 0;
 
-        let touran = document.getElementById('touran');
+            const groups = document.getElementsByClassName('card-group');
 
-        let polo = document.getElementById('polo');
+            const handlePrevClick = () => {
+                const nextIndex = activeIndex + 1 <= groups.lenght -1 ? activeIndex + 1 : 0;
 
-        function next() {
-            number += 1;
-            // touran 1
-            // polo 2
+                const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+        nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
 
-            
+                currentGroup.dataset.status = "after";
 
-            if (number == 1) {
-                touran.classList.replace('card-group','card-group-next');
-                polo.classList.replace('card-group-next','card-group');
-            }
-            else if (number == 2) {
-                polo.classList.replace('card-group','card-group-next');
-                touran.classList.replace('card-group-next','card-group');
+                nextGroup.dataset.status = "active";
+
+                activeIndex = nextIndex;
             }
 
-            
-
-
-        }
         function test() {
             var height = window.pageYOffset;
             var nav = document.getElementById('nav');
@@ -196,26 +112,26 @@
         } 
         window.setInterval(test(), 0);
 
-        function touran_hover() {
-            var t1 = document.getElementById('t1');
-            var t2 = document.getElementById('t2');
-            var t3 = document.getElementById('t3');
+        // function touran_hover() {
+        //     var t1 = document.getElementById('t1');
+        //     var t2 = document.getElementById('t2');
+        //     var t3 = document.getElementById('t3');
 
-            t1.classList.add("cardhovert1");
-            t2.classList.add("cardhovert2");
-            t3.style.transition = "all 0.5s";
-            t3.style.zIndex = "5";
-        }
-        function touran_unhover() {
-            var t1 = document.getElementById('t1');
-            var t2 = document.getElementById('t2');
-            var t3 = document.getElementById('t3');
+        //     t1.classList.add("cardhovert1");
+        //     t2.classList.add("cardhovert2");
+        //     t3.style.transition = "all 0.5s";
+        //     t3.style.zIndex = "5";
+        // }
+        // function touran_unhover() {
+        //     var t1 = document.getElementById('t1');
+        //     var t2 = document.getElementById('t2');
+        //     var t3 = document.getElementById('t3');
 
-            t1.classList.remove("cardhovert1");
-            t2.classList.remove("cardhovert2");
-            t3.style.transition = "all 0.1s";
-            t3.style.zIndex = "3";
-        }
+        //     t1.classList.remove("cardhovert1");
+        //     t2.classList.remove("cardhovert2");
+        //     t3.style.transition = "all 0.1s";
+        //     t3.style.zIndex = "3";
+        // }
 
         function polo_hover() {
             var p2 = document.getElementById('p2');
