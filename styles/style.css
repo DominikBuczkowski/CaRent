@@ -53,6 +53,14 @@ main {
 .card-group {
     width: 600px;
 }
+.card-group-next {
+    transform: scale(0.3);
+    position: absolute;
+    right: 10px;
+}
+.card-group {
+    width: 600px;
+}
 .card {
     width: 600px;
     height: 285px;
@@ -155,7 +163,7 @@ sub {
 }
 
 .cardhovert1 {
-    transform: translate(-520px, 22px) rotate(-15deg) rotateY(180deg);
+    transform: translate(-520px, 22px) rotate(-15deg) rotateY(3600deg);
     transition: 1s all;
     z-index: 1;
 }
@@ -163,8 +171,8 @@ sub {
     z-index: 5;
 }
 .cardhovert2 {
-    /* transform: translate(220px, 22px) rotate(15deg) rotateY(180deg) rotateZ(180deg); */
-    transform: translate(520px, 22px) rotate(15deg);
+    transform: translate(220px, 22px) rotate(15deg) rotateY(180deg) rotateZ(720deg);
+    /* transform: translate(520px, 22px) rotate(15deg); */
     transition: 1s all;
 }
 .cardhover {

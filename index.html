@@ -37,7 +37,7 @@
     <main>
         <section class="our-cars-cards">
             <div class="card-group" onmouseover="touran_hover()" onmouseleave="touran_unhover()"
-            id="touran"
+            id="touran" onclick="next()"
             >
                 <div class="card" id="t1">
                     <img src="/img/cars/touran_1.png">
@@ -73,8 +73,8 @@
             </div>
             </div>
 
-                <!-- <div class="card-group" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
-                id="polo"
+                <div class="card-group-next" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
+                id="polo" 
                 >
                     <div class="card" id="p1">
                         <img src="/img/cars/polo_1.png">
@@ -92,11 +92,13 @@
                                 <i class="fa-regular fa-gas-pump"></i>Benzyna
                             </div>
                             <div class="stats-half" id="seats">
+                            <div class="seats">
                                 <i class="fa-solid fa-person"></i>5
                             </div>
-                            <div class="stats-half" id="hp">
-                                <i>HP</i>740
+                            <div class="hp">
+                                <i>HP</i>1800
                             </div>
+
                         </div>
     
                         <div class="cena">
@@ -104,7 +106,7 @@
                         </div>
                         
                     </div>
-                </div> -->
+                </div>
                 <!-- <div class="card-group" onmouseover="polo_hover()" onmouseleave="polo_unhover()"
                 id="polo"
                 >
@@ -141,6 +143,32 @@
         </section>
     </main>
     <script>
+        let number = 1;
+
+        let touran = document.getElementById('touran');
+
+        let polo = document.getElementById('polo');
+
+        function next() {
+            number += 1;
+            // touran 1
+            // polo 2
+
+            
+
+            if (number == 1) {
+                touran.classList.replace('card-group','card-group-next');
+                polo.classList.replace('card-group-next','card-group');
+            }
+            else if (number == 2) {
+                polo.classList.replace('card-group','card-group-next');
+                touran.classList.replace('card-group-next','card-group');
+            }
+
+            
+
+
+        }
         function test() {
             var height = window.pageYOffset;
             var nav = document.getElementById('nav');
