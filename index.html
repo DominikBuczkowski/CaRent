@@ -45,7 +45,24 @@
                 <button id="next-button">BEXT</button>
             </div>
 
-            <div class="card-group">
+
+            <div class="card-group" id="touran" data-status="active" data-index="0">
+                <div class="card">
+                    ABC
+                </div>
+
+                <div class="card">
+                    BCA
+                </div>
+
+                <div class="card">
+                    2
+                </div>
+                
+            </div>
+
+            
+            <div class="card-group" id="touran" data-status="after" data-index="1">
                 <div class="card">
                     ABC
                 </div>
@@ -59,6 +76,23 @@
                 </div>
                 
             </div>
+
+            <div class="card-group" id="touran" data-status="before" data-index="2">
+                <div class="card" >
+                    3
+                </div>
+
+                <div class="card">
+                    3
+                </div>
+
+                <div class="card">
+                    3a
+                </div>
+                
+            </div>
+
+            
             
 
                         
@@ -68,22 +102,26 @@
         </section>
     </main>
     <script>
-            let activeIndex = 0;
+           let activeIndex = 0;
 
-            const groups = document.getElementsByClassName('card-group');
+            const groups = document.getElementsByClassName("card-group");
 
             const handlePrevClick = () => {
-                const nextIndex = activeIndex + 1 <= groups.lenght -1 ? activeIndex + 1 : 0;
-
-                const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
-        nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
-
-                currentGroup.dataset.status = "after";
-
+            const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
+            
+            const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+                    nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
+                    
+            currentGroup.dataset.status = "after";
+            
+            nextGroup.dataset.status = "before";
+            
+            setTimeout(() => {
                 nextGroup.dataset.status = "active";
-
                 activeIndex = nextIndex;
+            });
             }
+
 
         function test() {
             var height = window.pageYOffset;

@@ -79,9 +79,29 @@ main {
 .card-group {
     width: 400px;
     height: 200px;
-    position: absolute;
+    
     
 }
+.card-group[data-status="after"] {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    right: 15%;
+    transform: translateX(200px) scale(0.2);
+    transition: 1s;
+    
+}
+
+.card-group[data-status="before"] {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 15%;
+    transform: translateX(-200px) scale(0.2);
+    transition: 1s;
+    
+}
+
 .card-group img {
     width: 400px;
     height: 200px;
@@ -91,7 +111,8 @@ main {
 .card {
     position: absolute;
     transition: 1s;
-    border-radius: 15px;  
+    border-radius: 15px;
+    background-color: chartreuse;
     
 }
 .card-group:hover > .card:nth-child(3) {
