@@ -22,7 +22,7 @@
 
     </head>
 
-<body onmouseover="test()">
+<body>
     
     <nav class="nav" id="nav">
         <img src="/img/nav_logo.png" height="45px" alt="logo" id="logo"/>
@@ -38,15 +38,19 @@
         <section class="our-cars-cards" >
             
             <div class="prev-button">
-                <button id="prev-button" onclick="handlePrevClick()">PREVIOUS</button>
+                <button id="prev-button" onclick="handlePrevClick()">
+                    <
+                </button>
             </div>
 
             <div class="next-button">
-                <button id="next-button">BEXT</button>
+                <button id="next-button" onclick="handleNextClick()">
+                    >
+                </button>
             </div>
 
 
-            <div class="card-group" id="touran" data-status="active" data-index="0">
+            <div class="card-group" id="touran" data-status="before" data-index="0">
                 <div class="card">
                     ABC
                 </div>
@@ -62,7 +66,7 @@
             </div>
 
             
-            <div class="card-group" id="touran" data-status="after" data-index="1">
+            <div class="card-group" id="touran" data-status="active" data-index="1">
                 <div class="card">
                     ABC
                 </div>
@@ -77,7 +81,7 @@
                 
             </div>
 
-            <div class="card-group" id="touran" data-status="before" data-index="2">
+            <div class="card-group" id="touran" data-status="after" data-index="2">
                 <div class="card" >
                     3
                 </div>
@@ -88,6 +92,21 @@
 
                 <div class="card">
                     3a
+                </div>
+                
+            </div>
+
+            <div class="card-group" id="touran" data-status="back" data-index="4">
+                <div class="card">
+                    ABC
+                </div>
+
+                <div class="card">
+                    BCA
+                </div>
+
+                <div class="card">
+                    2
                 </div>
                 
             </div>
@@ -106,49 +125,78 @@
 
             const groups = document.getElementsByClassName("card-group");
 
-            const handlePrevClick = () => {
-            const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
-            
-            const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
-                    nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
-                    
+            const handleNextClick = () => {
+
+            const currentGroup = document.querySelector(`[data-status="active"]`),
+
+            nextGroup = document.querySelector(`[data-status="after"]`),
+
+            prevGroup = document.querySelector(`[data-status="before"]`),
+
+            backGroup = document.querySelector(`[data-status="back"]`);
+
+
             currentGroup.dataset.status = "after";
+            prevGroup.dataset.status = "active";
+            nextGroup.dataset.status = "back";
+            backGroup.dataset.status = "before";
+
+            };
+
+            const handlePrevClick = () => {
+
+            const currentGroup = document.querySelector(`[data-status="active"]`),
+
+            nextGroup = document.querySelector(`[data-status="after"]`),
+
+            prevGroup = document.querySelector(`[data-status="before"]`),
+
+            backGroup = document.querySelector(`[data-status="back"]`);
+
+            currentGroup.dataset.status = "before";
+            prevGroup.dataset.status = "back";
+            nextGroup.dataset.status = "active";
+            backGroup.dataset.status = "after";
+            };
+
             
-            nextGroup.dataset.status = "before";
-            
-            setTimeout(() => {
-                nextGroup.dataset.status = "active";
-                activeIndex = nextIndex;
-            });
-            }
 
 
-        function test() {
+
+        var check = setInterval(function() {
             var height = window.pageYOffset;
             var nav = document.getElementById('nav');
             var diamond = document.getElementById('diamond');
             var logo = document.getElementById('logo');
 
-            
 
-            if (height >= 400) {
-                nav.classList.replace('nav','nav-alt');
-                diamond.style.display = "block";
-                logo.style.display = "none";
+                nav.addEventListener('mouseover', function(ms) {
+
+                        nav.classList.replace('nav-alt','nav');
+                        console.log("aa")
+                    
+                    
+                });
+            
+            
+                if (height >= 400) {
+                    nav.classList.replace('nav','nav-alt');
+                    diamond.style.display = "block";
+                    logo.style.display = "none";
+                   
+                    
+                }
                 
                 
-            }
-            else {
+                
+            
+            else if (height <= 400) {
                 nav.classList.replace('nav-alt','nav');
                 diamond.style.display = "none";
                 logo.style.display = "block";
                 
-            }
-
-
-
-        } 
-        window.setInterval(test(), 0);
+            };
+        }, 100);
 
         // function touran_hover() {
         //     var t1 = document.getElementById('t1');
