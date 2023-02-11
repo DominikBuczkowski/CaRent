@@ -104,15 +104,14 @@ main {
     width: 400px;
     height: 200px;
     position: absolute;
-    right: 15%;
-    transform: translateX(200px) scale(0.2);
-    transition: 10s;
+    transform: translateX(170%) scale(0.2);
+    transition: 1s;
     
 }
 .card-group[data-status="active"] {
     width: 400px;
     height: 200px;
-    transition: 10s;
+    transition: 1s;
     
 }
 
@@ -120,24 +119,46 @@ main {
     width: 400px;
     height: 200px;
     position: absolute;
-    top: 15%;
-    right: calc(50% - 200px);
-    transform: scale(0.2);
-    transition: 10s;
+    transform: translateY(-170%) scale(0.2);
+    transition: 1s;
     
 }
+
 .card-group[data-status="before"] {
     width: 400px;
     height: 200px;
     position: absolute;
-    left: 15%;
-    transform: translateX(-200px) scale(0.2);
-    transition: 10s;
+    transform: translateX(-170%) scale(0.2);
+    transition: 1s;
+    
     
 }
+.card-group[data-status="before"] > .card:nth-child(1) {
+    width: 400px;
+    height: 200px;
+    opacity: 0;
+}
+.card-group[data-status="after"] > .card:nth-child(1) {
+    width: 400px;
+    height: 200px;
+    opacity: 0;
+}
+.card-group[data-status="back"] > .card:nth-child(1) {
+    width: 400px;
+    height: 200px;
+    opacity: 0;
+    
+}
+.card-group[data-status="active"] > .card:nth-child(1) {
+    width: 400px;
+    height: 250px;
+    opacity: 1;
+    
+}
+
 .card-group[data-status="after"]:hover > .card:nth-child(3) {
     transform: translateX(0px) rotate(0deg) rotateY(0deg);
-    transition: 1s;
+    transition: 10s;
        
 }
 .card-group[data-status="after"]:hover > .card:nth-child(2) {
@@ -193,21 +214,26 @@ main {
     position: absolute;
     transition: 1s;
     border-radius: 15px;
-    background-color: chartreuse;
+    background-color: white;
     
 }
+
+
 .card-group:hover > .card:nth-child(3) {
     transform: translateX(-400px) rotate(-35deg) rotateY(-180deg);
     transition: 1s;
+    
 }
 .card-group:hover > .card:nth-child(2) {
     transform: translateX(400px) rotate(35deg) ;
     transition: 1s;
+    
 }
 .card-group:hover > .card:nth-child(1) {
     transition: 1.5s ease;
     /* transform: rotateX(360deg); */
     z-index: 3;
+    
 
 }
 
@@ -215,14 +241,14 @@ main {
 .card:nth-child(1) {
     position: absolute;
     width: 400px;
-    height: 200px;
-    background-color: gray;
+    height: 250px;
     
 }
 .card:nth-child(2) {
     position: absolute;
     width: 400px;
     height: 200px;
+    
     
 }
 .card:nth-child(3) {
@@ -231,4 +257,33 @@ main {
     width: 400px;
     height: 200px;
     background-color: gray;
+}
+.info-cluster {
+    height: 200px;
+    width: 400px;
+}
+.info-price-cluster {
+    width: 400px;
+    height: 50px;
+    
+}
+.info-price:nth-child(3) {
+    color: #a349a4;
+    
+}
+.info-price:nth-child(4) {
+    color: #00a2e8;
+    
+}
+.info-price {
+    width: 50%;
+    float: left;
+    font-size: 25px;
+    text-align: center;
+}
+.info-price-label {
+    width: 50%;
+    float: left;
+    font-size: 20px;
+    text-align: center;
 }

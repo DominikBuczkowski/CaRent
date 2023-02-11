@@ -55,20 +55,39 @@
                     ABC
                 </div>
 
-                <div class="card">
+                <div class="card" >
                     BCA
                 </div>
 
-                <div class="card">
+                <div class="card" style="background-color: red;">
                     2
                 </div>
                 
             </div>
 
             
-            <div class="card-group" id="touran" data-status="active" data-index="1">
+            <div class="card-group" id="touranA" data-status="active" data-index="1">
                 <div class="card">
-                    ABC
+                    <div class="info-cluster">
+                       TEST
+                    </div>
+                    <div class="info-price-cluster">
+
+                        <div class="info-price-label" style="clear: both;">
+                            z limitem km
+                        </div>
+                        <div class="info-price-label">
+                            bez limitu km
+                        </div>
+
+                        <div class="info-price">
+                            2000zł
+                        </div>
+                        <div class="info-price">
+                            1000zł
+                        </div>
+                        
+                    </div>
                 </div>
 
                 <div class="card">
@@ -82,7 +101,7 @@
             </div>
 
             <div class="card-group" id="touran" data-status="after" data-index="2">
-                <div class="card" >
+                <div class="card">
                     3
                 </div>
 
@@ -134,7 +153,6 @@
             prevGroup = document.querySelector(`[data-status="before"]`),
 
             backGroup = document.querySelector(`[data-status="back"]`);
-
 
             currentGroup.dataset.status = "after";
             prevGroup.dataset.status = "active";
