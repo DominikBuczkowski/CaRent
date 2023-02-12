@@ -104,14 +104,18 @@ main {
     width: 400px;
     height: 200px;
     position: absolute;
-    transform: translateX(170%) scale(0.2);
+    transform: translateX(170%) scale(0.4);
     transition: 1s;
     
+    
 }
+
 .card-group[data-status="active"] {
     width: 400px;
     height: 200px;
     transition: 1s;
+    z-index: 10;
+    transform: translateY(75%);
     
 }
 
@@ -128,11 +132,10 @@ main {
     width: 400px;
     height: 200px;
     position: absolute;
-    transform: translateX(-170%) scale(0.2);
+    transform: translateX(-170%) scale(0.4);
     transition: 1s;
-    
-    
 }
+
 .card-group[data-status="before"] > .card:nth-child(1) {
     width: 400px;
     height: 200px;
@@ -142,6 +145,7 @@ main {
     width: 400px;
     height: 200px;
     opacity: 0;
+    
 }
 .card-group[data-status="back"] > .card:nth-child(1) {
     width: 400px;

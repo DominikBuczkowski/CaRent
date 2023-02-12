@@ -25,7 +25,7 @@
 <body>
     
     <nav class="nav" id="nav">
-        <img src="/img/nav_logo.png" height="45px" alt="logo" id="logo"/>
+        <img src="/img/nav_logo.png" height="45px" alt="logo" id="logo" onclick="move()"/>
 
         <div class="rect" id="diamond">
         </div>
@@ -138,8 +138,10 @@
 
             
         </section>
+
     </main>
     <script>
+
            let activeIndex = 0;
 
             const groups = document.getElementsByClassName("card-group");
