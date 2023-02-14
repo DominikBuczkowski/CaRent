@@ -52,7 +52,7 @@ let activeIndex = 0;
                 });
             
             
-                if (height >= 400) {
+                if (height >= 880) {
                     nav.classList.replace('nav','nav-alt');
                     diamond.style.display = "block";
                     logo.style.display = "none";
@@ -63,7 +63,7 @@ let activeIndex = 0;
                 
                 
             
-            else if (height <= 400) {
+            else if (height <= 880) {
                 nav.classList.replace('nav-alt','nav');
                 diamond.style.display = "none";
                 logo.style.display = "block";
