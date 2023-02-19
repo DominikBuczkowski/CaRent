@@ -310,13 +310,18 @@ main {
     align-items: center;
 }
 
-.abc {
+.flota {
     width: calc(100% - 10px);
     border: 1px solid white;
     margin: auto;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+.flota-header {
+    width:100%;
+    color: white;
+    text-align: center;
 }
 .gen-block {
     max-width: 450px;
@@ -326,19 +331,44 @@ main {
     background-color: white;
 }
 .gen-block-img {
-    width: 450px;
-    height: 205px;
+    width: 100%;
+    height: 200px;
     margin-bottom: 15px;
     background-size: 400px 250px;
-    background-repeat: no-repeat;
-    background-size:contain;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
+
+.gen-block-img img[data-status="active"] {
+    width: 400px;
+    position: absolute;
+    display: block;
 }
-.gen-block-img > img {
+.gen-block-img img[data-status="hidden"]{
+    width: 400px;
+    position: absolute;
+    display: none;
+}
+.gen-block-img img[data-status="hidden"]{
+    width: 400px;
+    position: absolute;
+    display: none;
+}
+.gen-block-name {
     width: 100%;
-    height: 100%;
-    
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.gen-block-top {
+    width: 450px;
+}
+
 .gen-block-info-cluster {
     width: 100%;
     margin-bottom: 15px;
@@ -368,4 +398,31 @@ main {
     align-items: center;
     justify-content: center;
     height: 30px;
+}
+h4 {
+    text-align: center;
+    margin: 0;
+}
+.gen-block-text {
+    max-width: 450px;
+    min-width: 250px;
+    margin: 30px;
+    padding: 30px;
+    width: calc(auto - 60px);
+    background-color: white;
+}
+.gen-block-text > * {
+    width: 100%;
+    text-align: center;
+}
+.gen-block-text h1, h2 {
+    margin: 0;
+}
+.text-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    text-align: left;
+    font-size: 20px;
 }
