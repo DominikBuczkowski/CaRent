@@ -4,41 +4,6 @@ body {
     background-color: black;
     height: 1500px;
 }
-footer {
-    width: 100%;
-    height: 150px;
-    background-color: #00a2e8;
-}
-.footer-main {
-    width: 100%;
-    height: 85%;
-    background-color: #5e235f;
-    display: flex;
-    justify-content: space-evenly;
-}
-.footer-block {
-    width: calc(25% - 30px);
-    height: calc(100% - 30px);
-    font-size: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.footer-block a {
-    color: white;
-    text-decoration: inherit;
-}
-.footer-block a:hover {
-    color: white;
-    text-decoration: underline;
-}
-.footer-lower {
-    width: 100%;
-    text-align: center;
-    color: white;
-}
 .nav {
     width: 100%;
     height: 60px;
@@ -46,8 +11,11 @@ footer {
     background-color: rgba(0,0,0, 0.3);
     backdrop-filter: blur(10px);
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 100;
-    transition: all 0.4s;
+    transition: all 0.2s;
 }
 .rect {
     width: 50px;
@@ -67,53 +35,7 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 100;
-    transition: all 0.4s;
-}
-.nav-alt > .nav-button-cluster {
-    display: none;;
-}
-.nav-button-cluster {
-    width: 20%;
-    height: 100%;
-    float:left;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.nav-button-cluster:nth-child(1) {
-    margin-right: 20%;
-}
-.nav-button-cluster:nth-child(3) {
-    margin-left: 20%;
-}
-.nav-button {
-    width: 125px;
-    height: 80%;
-    background-color: white;
-    justify-self: flex-start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    background-color: rgba(255,255,255, 1);
-    backdrop-filter: blur(10px);
-    color: inherit;
-    text-decoration: none;
-    transition: 0.5s all;
-}
-.nav-button:hover {
-    background-color: rgba(255,255,255, 0.5);
-    backdrop-filter: blur(10px);
-    transition: 0.5s all;
-}
-
-.nav-logo-cluster {
-    width: 20%;
-    height: 100%;
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: all 0.2s;
 }
 .space {
     height: 50px;
@@ -123,6 +45,7 @@ footer {
 .our-cars-cards {
     height: 950px;
     width: calc(100% - 10px);
+    border: 1px solid white;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -389,7 +312,7 @@ main {
 
 .flota {
     width: calc(100% - 10px);
-    border-top: 1px solid white;
+    border: 1px solid white;
     margin: auto;
     display: flex;
     justify-content: space-evenly;

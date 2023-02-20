@@ -28,32 +28,34 @@
         <div class="nav-button-cluster">
             
             <a href="osobowe.html" class="nav-button">
-                <div>
+                <div class="nav-button">
                     Osobowe
                 </div>
             </a>
             <a href="javascript:void()" class="nav-button">
-                <div>
+                <div class="nav-button">
                     Ciężarowe
                 </div>
             </a>
             
             
         </div>
+        <a href="index.html">
         <div class="nav-logo-cluster">
             <img src="/img/nav_logo.png" height="45" alt="logo" id="logo">
 
             <div class="rect" id="diamond" onclick="ScrollToTop()">
             </div>
         </div>
+    </a>
         <div class="nav-button-cluster">
             <a href="javascript:void()" class="nav-button">
-                <div>
+                <div class="nav-button">
                     Kontakt
                 </div>
             </a>
             <a href="javascript:void()" class="nav-button">
-                <div>
+                <div class="nav-button">
                     O nas
                 </div>
             </a>
@@ -64,221 +66,14 @@
     </nav>
     
     <main>
-        <div class="space">
-            <h1>Polecane</h1>
-        </div>
-        <section class="our-cars-cards" >
-            
-            <div class="prev-button">
-                <button id="prev-button" onclick="handlePrevClick()">
-                    &lt;
-                </button>
-            </div>
-
-            <div class="next-button">
-                <button id="next-button" onclick="handleNextClick()">
-                    &gt;
-                </button>
-            </div>
 
 
-            <div class="card-group" id="touran" data-status="before" data-index="0">
-                <div class="card">
-                    <div class="info-cluster">
-                        <div class="info-year">
-                            <i class="fa-regular fa-calendar-days"></i>&nbsp;1975
-                        </div>
-                        <div class="info-seats">
-                            <i class="fa-solid fa-person"></i>&nbsp;2
-                        </div>
-
-                        <div class="info-en" style="clear: both;">
-                            <i class="fa-regular fa-gas-pump"></i>&nbsp;Elektryk
-                        </div>
-                        <div class="info-hp">
-                            <i>HP</i>&nbsp;6
-                        </div>
-                    </div>
-                    <div class="info-price-cluster">
-
-                        <div class="info-price-label" style="clear: both;">
-                            z limitem km
-                        </div>
-                        <div class="info-price-label">
-                            bez limitu km
-                        </div>
-
-                        <div class="info-price">
-                            2000zł
-                        </div>
-                        <div class="info-price">
-                            1000zł
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="card" >
-                    <img src="/img/cars/citi_2.png">
-                </div>
-
-                <div class="card" style="background-color: red;">
-                    <img src="/img/cars/citi_1.png">
-                </div>
-                
-            </div>
-
-            
-            <div class="card-group" data-status="active" data-index="1">
-                <div class="card">
-                    <div class="info-cluster">
-                        <div class="info-year">
-                            <i class="fa-regular fa-calendar-days"></i>&nbsp;1975
-                        </div>
-                        <div class="info-seats">
-                            <i class="fa-solid fa-person"></i>&nbsp;5
-                        </div>
-
-                        <div class="info-en" style="clear: both;">
-                            <i class="fa-regular fa-gas-pump"></i>&nbsp;Diesel
-                        </div>
-                        <div class="info-hp">
-                            <i>HP</i>&nbsp;140
-                        </div>
-                    </div>
-                    <div class="info-price-cluster">
-
-                        <div class="info-price-label" style="clear: both;">
-                            z limitem km
-                        </div>
-                        <div class="info-price-label">
-                            bez limitu km
-                        </div>
-
-                        <div class="info-price">
-                            2000zł
-                        </div>
-                        <div class="info-price">
-                            1000zł
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="/img/cars/touran_2.png">
-                </div>
-
-                <div class="card">
-                    <img src="/img/cars/touran_1.png">
-                </div>
-                
-            </div>
-
-            <div class="card-group" data-status="after" data-index="2">
-                <div class="card">
-                    <div class="info-cluster">
-                        <div class="info-year">
-                            <i class="fa-regular fa-calendar-days"></i>&nbsp;1999
-                        </div>
-                        <div class="info-seats">
-                            <i class="fa-solid fa-person"></i>&nbsp;4
-                        </div>
-
-                        <div class="info-en" style="clear: both;">
-                            <i class="fa-regular fa-gas-pump"></i>&nbsp;benzyna
-                        </div>
-                        <div class="info-hp">
-                            <i>HP</i>&nbsp;321
-                        </div>
-                    </div>
-                    <div class="info-price-cluster">
-
-                        <div class="info-price-label" style="clear: both;">
-                            z limitem km
-                        </div>
-                        <div class="info-price-label">
-                            bez limitu km
-                        </div>
-
-                        <div class="info-price">
-                            2000zł
-                        </div>
-                        <div class="info-price">
-                            1000zł
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="img/cars/e36_2.png">
-                </div>
-
-                <div class="card">
-                    <img src="img/cars/e36_1.png">
-                </div>
-                
-            </div>
-
-            <div class="card-group" data-status="back" data-index="4">
-                <div class="card">
-                    <div class="info-cluster">
-                        <div class="info-year">
-                            <i class="fa-regular fa-calendar-days"></i>&nbsp;2003
-                        </div>
-                        <div class="info-seats">
-                            <i class="fa-solid fa-person"></i>&nbsp;5
-                        </div>
-
-                        <div class="info-en" style="clear: both;">
-                            <i class="fa-regular fa-gas-pump"></i>&nbsp;benzyna
-                        </div>
-                        <div class="info-hp">
-                            <i>HP</i>&nbsp;660
-                        </div>
-                    </div>
-                    <div class="info-price-cluster">
-
-                        <div class="info-price-label" style="clear: both;">
-                            z limitem km
-                        </div>
-                        <div class="info-price-label">
-                            bez limitu km
-                        </div>
-
-                        <div class="info-price">
-                            2000zł
-                        </div>
-                        <div class="info-price">
-                            1000zł
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="/img/cars/polo_2.png">
-                </div>
-
-                <div class="card">
-                    <img src="/img/cars/polo_1.png">
-                </div>
-                
-            </div>
-
-            
-            
-
-                        
 
 
-            
-        </section>
 
         <section class="flota">
             <header class="flota-header">
-                <h1>Nasza flołta</h1>
+                <h1>Samochody osobowe</h1>
             </header>
             
             <div class="gen-block">
@@ -468,27 +263,6 @@
         </section>
 
     </main>
-    <footer>
-        <div class="footer-main">
-            <div class="footer-block">
-                <a href="osobowe.html">Samochody osobowe</a>
-                    </br>
-                <a href="ciezarowe.html">Samochody ciężarowe</a>
-                    </br>
-                <a href="javascript:void">Zgłoś stłuczkę</a>
-            </div>
-            <div class="footer-block">
-                <a href="ciezarowe.html">Samochody ciężarowe</a>
-            </div>
-            <div class="footer-block">
-                <a href="javascript:void">Zgłoś stłuczkę</a>
-            </div>
-        </div>
-        <div class="footer-lower">
-            CaRent 	&#174;
-        </div>
-
-    </footer>
     <script src="main.js"></script>
     
 </body>
