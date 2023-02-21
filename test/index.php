@@ -1,3 +1,7 @@
+<?php
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -25,10 +29,44 @@
 <body>
     
     <nav class="nav" id="nav">
-        <img src="/img/nav_logo.png" height="45" alt="logo" id="logo" onclick="move()">
-
-        <div class="rect" id="diamond">
+        <div class="nav-button-cluster">
+            
+            <a href="osobowe.html" class="nav-button">
+                <div>
+                    Osobowe
+                </div>
+            </a>
+            <a href="ciezarowe.html" class="nav-button">
+                <div>
+                    Ciężarowe
+                </div>
+            </a>
+            
+            
         </div>
+        <div class="nav-logo-cluster">
+            <a href="index.html">
+                <img src="/img/nav_logo.png" height="45" alt="logo" id="logo">
+            </a>
+
+            <div class="rect" id="diamond" onclick="ScrollToTop()">
+            </div>
+        </div>
+        <div class="nav-button-cluster">
+            <a href="kontakt.html" class="nav-button">
+                <div>
+                    Kontakt
+                </div>
+            </a>
+            <a href="onas.html" class="nav-button">
+                <div>
+                    O nas
+                </div>
+            </a>
+        </div>
+        
+
+        
     </nav>
     
     <main>
@@ -244,22 +282,57 @@
             
         </section>
 
-        <section class="flota">
-            <header class="flota-header">
-                <h1>Nasza flołta</h1>
-            </header>
+        <section class="flota" style="height: 1000px;">
+        <div class="filter-box">
+            <form target="" method="post">
             
-            <?php
-                require 'print.php';
+                <input type="number" name="seats">
+                <input type="submit" name="Submit">
+            
+</form>
+</div>
+            <!-- <?php
+            
 
-                aaa()
-
-            ?>
-
+        
+            require 'print.php';
+            aaa();
+            $_SESSION['seats'] = "";
+            ?> -->
         </section>
 
     </main>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-block">
+                <a href="osobowe.html">Samochody osobowe</a>
+                    </br>
+                <a href="ciezarowe.html">Samochody ciężarowe</a>
+                    </br>
+                <a href="javascript:void">Zgłoś stłuczkę</a>
+            </div>
+            <div class="footer-block">
+
+                <button onclick="download_regulamin()">Regulamin</button>
+                    </br>
+                    <button onclick="download_rodo()">rodo</button>
+                    </br>
+                    <button onclick="download_dokumenty()">dokumenty</button>
+            </div>
+            <div class="footer-block">
+                <a href="javascript:void()">O nas</a>
+                    </br>
+                <a href="javascript:void()">Kontakt</a>
+                    </br>
+                <a href="javascript:void()">Jak dojechać?</a>
+            </div>
+        </div>
+        <div class="footer-lower">
+            CaRent 	&#174;
+        </div>
+
+    </footer>
     <script src="main.js"></script>
-    
+    <script src="download_files.js"></script>
 </body>
 </html>

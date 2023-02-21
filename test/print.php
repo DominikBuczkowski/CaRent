@@ -1,15 +1,36 @@
 <?php
+$_POST['seats'] = "";
+$_SESSION['seats'] = $_POST['seats'];
+
+
+
 
     function aaa() {
         require 'conn.php';
+        $seats = $_SESSION['seats'];
+
 
         $conn = new mysqli($servername, $username, $password, $dbname);
+        
         // Check connection
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT * from osobowe ORDER BY RAND()";
+        
+            // collect value of input field
+            if ($seats == "") {
+                $sql = "SELECT * from osobowe ORDER BY RAND()";
+            } else {
+                $sql = "SELECT * from osobowe where miejsca=$seats";
+            }
+          
+
+        
+
+       
+
+        
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -80,13 +101,15 @@
             </div>
         </div>
         ';
+
+        $seats = $_SESSION['seats'];
         }
         } else {
         echo "ERORR";
         }
 
 
-
+        session_abort();
     }
 
         
