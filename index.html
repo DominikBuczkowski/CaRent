@@ -32,7 +32,7 @@
                     Osobowe
                 </div>
             </a>
-            <a href="javascript:void()" class="nav-button">
+            <a href="ciezarowe.html" class="nav-button">
                 <div>
                     Ciężarowe
                 </div>
@@ -41,18 +41,20 @@
             
         </div>
         <div class="nav-logo-cluster">
-            <img src="/img/nav_logo.png" height="45" alt="logo" id="logo">
+            <a href="index.html">
+                <img src="/img/nav_logo.png" height="45" alt="logo" id="logo">
+            </a>
 
             <div class="rect" id="diamond" onclick="ScrollToTop()">
             </div>
         </div>
         <div class="nav-button-cluster">
-            <a href="javascript:void()" class="nav-button">
+            <a href="kontakt.html" class="nav-button">
                 <div>
                     Kontakt
                 </div>
             </a>
-            <a href="javascript:void()" class="nav-button">
+            <a href="onas.html" class="nav-button">
                 <div>
                     O nas
                 </div>
@@ -478,10 +480,19 @@
                 <a href="javascript:void">Zgłoś stłuczkę</a>
             </div>
             <div class="footer-block">
-                <a href="ciezarowe.html">Samochody ciężarowe</a>
+
+                <button onclick="download_regulamin()">Regulamin</button>
+                    </br>
+                    <button onclick="download_rodo()">rodo</button>
+                    </br>
+                    <button onclick="download_dokumenty()">dokumenty</button>
             </div>
             <div class="footer-block">
-                <a href="javascript:void">Zgłoś stłuczkę</a>
+                <a href="javascript:void()">O nas</a>
+                    </br>
+                <a href="javascript:void()">Kontakt</a>
+                    </br>
+                <a href="javascript:void()">Jak dojechać?</a>
             </div>
         </div>
         <div class="footer-lower">
@@ -490,6 +501,6 @@
 
     </footer>
     <script src="main.js"></script>
-    
+    <script src="download_files.js"></script>
 </body>
 </html>
