@@ -52,7 +52,6 @@ var check = setInterval(function() {
         nav.addEventListener('mouseover', function(ms) {
 
                 nav.classList.replace('nav-alt','nav');
-                console.log("aa")
             
             
         });
@@ -77,3 +76,26 @@ var check = setInterval(function() {
     };
 }, 100);
 
+
+const theme_button = document.getElementById('theme_button');
+theme_button.addEventListener("click", () => {
+
+    let css = document.getElementById('theme');
+    let solar = document.getElementById('solar');
+    let logo = document.getElementById('logo');
+
+    if (css.href === "http://127.0.0.1:5500/styles/style.css") {
+
+        css.href = 'styles/style-white.css';
+        logo.src = '/img/nav_logo-dark.png';
+        solar.classList = 'fa-solid fa-moon';
+    }
+    else if (css.href === "http://127.0.0.1:5500/styles/style-white.css") {
+
+        css.href = 'styles/style.css';
+        logo.src = '/img/nav_logo.png';
+        solar.classList = 'fa-solid fa-sun';
+
+    }
+    
+})

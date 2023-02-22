@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="nouislider.css" rel="stylesheet">
+<script src="nouislider.js"></script>
+
+<style>
+    #slider {
+        margin: 100px;
+    }
+</style>
+</head>
+<body>
+
+    <div id="slider"></div>
+    <script>
+        var slider = document.getElementById('slider');
+        
+        noUiSlider.create(slider, {
+            start: [2, 9],
+            tooltips: true,
+            connect: true,
+            step: 1,
+            range: {
+                'min': 2,
+                'max': 9,
+            },
+            pips: {
+                mode: 'values',
+                values: [2, 4, 5, 7, 9]
+            }
+            
+        });
+        
+        </script>
+    
+</body>
+</html>
