@@ -1,13 +1,7 @@
 <?php
-$_POST['seats'] = "";
-$_SESSION['seats'] = $_POST['seats'];
-
-
-
 
     function aaa() {
         require 'conn.php';
-        $seats = $_SESSION['seats'];
 
 
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,14 +10,7 @@ $_SESSION['seats'] = $_POST['seats'];
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         }
-
-        
-            // collect value of input field
-            if ($seats == "") {
-                $sql = "SELECT * from osobowe ORDER BY RAND()";
-            } else {
-                $sql = "SELECT * from osobowe where miejsca=$seats";
-            }
+             $sql = "SELECT * from osobowe ORDER BY RAND()";
           
 
         
@@ -36,16 +23,27 @@ $_SESSION['seats'] = $_POST['seats'];
         if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
+            $id = $row['idosobowe'];
             $model = $row['model'];
+            $seats = $row['miejsca'];
+            $paliwo = $row['paliwo'];
+            $typ = $row['typ'];
+
+            $block_values = [$seats];
+
+            $blockid = $model.$id;
             
             echo '
+            <div class="gen-block" id="'.$blockid.'">
             <script>
                         var '.$model.' = 1;
+
+                        var '.$blockid.'_value = ['.$block_values[0].'];
                         
 
 
                     </script>
-            <div class="gen-block">
+
                 
                 <div class="gen-block-top">
                     
@@ -102,14 +100,12 @@ $_SESSION['seats'] = $_POST['seats'];
         </div>
         ';
 
-        $seats = $_SESSION['seats'];
         }
         } else {
         echo "ERORR";
         }
 
 
-        session_abort();
     }
 
         

@@ -1,7 +1,3 @@
-<?php
-
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -23,6 +19,8 @@ session_start();
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+        <script src="filter.js"></script>
 
     </head>
 
@@ -286,19 +284,17 @@ session_start();
         <div class="filter-box">
             <form target="" method="post">
             
-                <input type="number" name="seats">
-                <input type="submit" name="Submit">
+                <input type="tel" id="seats" oninput="filter()" maxlenght="10">
             
-</form>
+            </form>
 </div>
-            <!-- <?php
+        <?php
             
 
         
             require 'print.php';
             aaa();
-            $_SESSION['seats'] = "";
-            ?> -->
+        ?>
         </section>
 
     </main>
