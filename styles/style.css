@@ -515,8 +515,32 @@ h4 {
     width: 100%;
     height: 1200px;
 }
-.filter-box {
+.filter-cluster {
     width: 100%;
-    background-color: red;
     height: 150px;
 }
+.filter-box-before {
+    width: 40px;
+    background-color: white;
+    font-size: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    cursor: pointer;
+    position: absolute;
+}
+.filter-box-before:hover {
+    background-color: rgb(175, 175, 175);
+}
+.filter-box-after {
+    
+    margin-left: 40px;
+    padding: 40px;
+    width: 400px;
+    background-color: red;
+    height: calc(100px - 40px);
+}
+
+/* <i class="fa-regular fa-filter"></i> */

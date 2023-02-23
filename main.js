@@ -99,3 +99,13 @@ theme_button.addEventListener("click", () => {
     }
     
 })
+
+let filter_button = document.getElementById('filter-box-before');
+filter_button.addEventListener("click", () => {
+
+    let filter_box = querySelector(`[data-status="hidden"]`);
+    if (filter_box.dataset == "hidden") {
+        console.log("TEST")
+    }
+
+});
