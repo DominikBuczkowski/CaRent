@@ -100,15 +100,21 @@ theme_button.addEventListener("click", () => {
     
 })
 
-let filter_button = document.getElementById('filter-box-before');
-let filter_box = document.getElementById('filter-box-after');
+let filter_button = document.getElementById('filter-button');
 filter_button.addEventListener("click", () => {
+
+
+    let filter_icon = document.getElementById('filter-button-icon');
+    let filter_box = document.getElementById('filter-box-after');
 
     if (filter_box.dataset.status == "show") {
         filter_box.dataset.status = "hidden";
+        filter_icon.classList.replace('fa-x', 'fa-filter');
     }
     else if (filter_box.dataset.status == "hidden") {
         filter_box.dataset.status = "show";
+        filter_icon.classList.replace('fa-filter', 'fa-x');
     }
 
 });
+// <i class="fa-solid fa-x"></i>

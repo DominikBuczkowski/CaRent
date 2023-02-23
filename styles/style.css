@@ -34,7 +34,11 @@ footer {
     text-decoration: inherit;
     cursor: pointer;
 }
-.footer-block a:hover, button:hover {
+.footer-block > a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.footer-block > button:hover {
     color: white;
     text-decoration: underline;
 }
@@ -64,7 +68,7 @@ footer {
     width: 100%;
     height: 25px;
     top: 0;
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     position: fixed;
     display: flex;
@@ -519,7 +523,7 @@ h4 {
     width: 100%;
     height: 150px;
 }
-.filter-box-before {
+.filter-button {
     width: 40px;
     background-color: white;
     font-size: 30px;
@@ -530,24 +534,31 @@ h4 {
     margin-left: 40px;
     cursor: pointer;
     position: absolute;
+    right: 0;
+    margin-right: 90px;
+    z-index: 10;
 }
 .filter-box-before:hover {
     background-color: rgb(175, 175, 175);
 }
 .filter-box-after {
     display: block;
-    margin-left: 40px;
     padding: 40px;
     width: 400px;
     background-color: red;
     height: calc(100px - 40px);
     transition: 1s all;
+    position: absolute;
+    right: 0;
+    margin-right: 90px;
 }
 .filter-box-after[data-status="hidden"] {
     display: none;
+    transition: 1s all ease-in;
 }
 .filter-box-after[data-status="show"] {
     display: block;
+    transition: 1s all ease-in;
 }
 
     
