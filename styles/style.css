@@ -535,12 +535,19 @@ h4 {
     background-color: rgb(175, 175, 175);
 }
 .filter-box-after {
-    
+    display: block;
     margin-left: 40px;
     padding: 40px;
     width: 400px;
     background-color: red;
     height: calc(100px - 40px);
+    transition: 1s all;
+}
+.filter-box-after[data-status="hidden"] {
+    display: none;
+}
+.filter-box-after[data-status="show"] {
+    display: block;
 }
 
-/* <i class="fa-regular fa-filter"></i> */
+    

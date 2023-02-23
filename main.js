@@ -101,11 +101,14 @@ theme_button.addEventListener("click", () => {
 })
 
 let filter_button = document.getElementById('filter-box-before');
+let filter_box = document.getElementById('filter-box-after');
 filter_button.addEventListener("click", () => {
 
-    let filter_box = querySelector(`[data-status="hidden"]`);
-    if (filter_box.dataset == "hidden") {
-        console.log("TEST")
+    if (filter_box.dataset.status == "show") {
+        filter_box.dataset.status = "hidden";
+    }
+    else if (filter_box.dataset.status == "hidden") {
+        filter_box.dataset.status = "show";
     }
 
 });
