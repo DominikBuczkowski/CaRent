@@ -13,9 +13,20 @@
     #slider {
         margin: 100px;
     }
+    .akwarium {
+        width: 100%;
+        height: 600px;
+        background-color: cornflowerblue;
+        background-image: url('img/akwarium.jpg');
+        background-size: 100%, 600px;
+    }
+
 </style>
 </head>
-<body>
+<body onmouseover="move()">
+    <div class="akwarium">
+        <img src="img/cars/touran_1.png" id="box">
+    </div>
 
     <div id="slider"></div>
     <script>
@@ -37,6 +48,30 @@
             
         });
         
+        </script>
+
+        <script>
+            function move() {
+                var elem = document.getElementById("box"),
+                    speed = 1,
+                    currentPos = 0;
+                // Reset the element
+                elem.style.left = 0+"px";
+                elem.style.right = "auto";
+                var motionInterval = setInterval(function() {
+                    currentPos += speed;
+                    if (currentPos >= 800 && speed > 0) {
+                    currentPos = 800;
+                    speed = -2 * speed;
+                    elem.style.width = parseInt(elem.style.width)*2+"px";
+                    elem.style.height = parseInt(elem.style.height)*2+"px";
+                    }
+                    if (currentPos <= 0 && speed < 0) {
+                    clearInterval(motionInterval);
+                    }
+                    elem.style.left = currentPos+"px";
+                },20);
+            }
         </script>
     
 </body>
