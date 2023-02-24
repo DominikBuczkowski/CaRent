@@ -19,6 +19,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+        <link href="nouislider.css" rel="stylesheet">
+        <script src="nouislider.js"></script>
 
     </head>
 
@@ -289,9 +291,18 @@
                     <i class="fa-regular fa-filter" id="filter-button-icon"></i>
                 </div>
                 <div class="filter-box-after" id="filter-box-after" data-status="hidden">
+
                     <form target="" method="post">
-                
-                    <input type="tel" id="seats" oninput="filter()" maxlenght="10">
+                        <div class="slider-box">
+                            <div class="slider-label">
+                                <label>Ilość miejsc</label>
+                            </div>
+                            <div class="slider">
+                                <div id="slider" onclick="get_slider()"></div>
+
+                                <script src="handle_slider.js"></script>
+                            </div>
+                        </div>
                     
                     </form>
                 </div>

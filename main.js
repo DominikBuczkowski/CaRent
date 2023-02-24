@@ -117,4 +117,3 @@ filter_button.addEventListener("click", () => {
     }
 
 });
-// <i class="fa-solid fa-x"></i>

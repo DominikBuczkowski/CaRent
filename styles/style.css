@@ -51,7 +51,7 @@ footer {
     width: 100%;
     height: 60px;
     top: 0;
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(255,255,255, 0.3);
     backdrop-filter: blur(10px);
     position: fixed;
     z-index: 100;
@@ -543,21 +543,39 @@ h4 {
 }
 .filter-box-after {
     display: block;
-    padding: 40px;
-    width: calc(100% - 230px);
+    padding: 20px;
+    width: 90%;
     background-color: white;
-    height: calc(100px - 40px);
+    height: calc(100px - 20px);
     transition: 1s all;
     right: 0;
     margin: auto;
 }
 .filter-box-after[data-status="hidden"] {
+    /* display: block;  */
     display: none;
-    transition: 1s all ease-in;
+    transition: all 1s;
 }
 .filter-box-after[data-status="show"] {
     display: block;
-    transition: 1s all ease-in;
+    transition: all 1s;
 }
 
-    
+.slider-box {
+    width: 40%;
+    height: 80px;
+}
+.slider-label {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}

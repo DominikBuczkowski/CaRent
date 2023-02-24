@@ -116,7 +116,7 @@
   border-radius: 3px;
 }
 .noUi-connect {
-  background: #3FB8AF;
+  background-color: #00a2e8;
 }
 /* Handles and cursors;
  */
@@ -129,9 +129,9 @@
 .noUi-handle {
   border: 1px solid #D9D9D9;
   border-radius: 3px;
-  background: #FFF;
+  background: black;
   cursor: default;
-  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+
 }
 .noUi-active {
   box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
@@ -218,26 +218,14 @@
   top: 100%;
   left: 0;
   width: 100%;
+  font-size: 25px;
 }
 .noUi-value-horizontal {
   -webkit-transform: translate(-50%, 50%);
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 0%);
 }
-.noUi-rtl .noUi-value-horizontal {
-  -webkit-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);
-}
-.noUi-marker-horizontal.noUi-marker {
-  margin-left: -1px;
-  width: 2px;
-  height: 5px;
-}
-.noUi-marker-horizontal.noUi-marker-sub {
-  height: 10px;
-}
-.noUi-marker-horizontal.noUi-marker-large {
-  height: 15px;
-}
+
+
 /* Vertical layout;
  *
  */
