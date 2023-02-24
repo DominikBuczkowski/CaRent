@@ -535,22 +535,21 @@ h4 {
     cursor: pointer;
     position: absolute;
     right: 0;
-    margin-right: 90px;
+    margin-right: 80px;
     z-index: 10;
 }
-.filter-box-before:hover {
+.filter-button:hover {
     background-color: rgb(175, 175, 175);
 }
 .filter-box-after {
     display: block;
     padding: 40px;
-    width: 400px;
-    background-color: red;
+    width: calc(100% - 230px);
+    background-color: white;
     height: calc(100px - 40px);
     transition: 1s all;
-    position: absolute;
     right: 0;
-    margin-right: 90px;
+    margin: auto;
 }
 .filter-box-after[data-status="hidden"] {
     display: none;
