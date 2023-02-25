@@ -104,6 +104,8 @@ let filter_button = document.getElementById('filter-button');
 filter_button.addEventListener("click", () => {
 
 
+
+
     let filter_icon = document.getElementById('filter-button-icon');
     let filter_box = document.getElementById('filter-box-after');
 

@@ -34,7 +34,11 @@ footer {
     text-decoration: inherit;
     cursor: pointer;
 }
-.footer-block a:hover, button:hover {
+.footer-block > a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.footer-block > button:hover {
     color: white;
     text-decoration: underline;
 }
@@ -47,7 +51,7 @@ footer {
     width: 100%;
     height: 60px;
     top: 0;
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(255,255,255, 0.3);
     backdrop-filter: blur(10px);
     position: fixed;
     z-index: 100;
@@ -64,7 +68,7 @@ footer {
     width: 100%;
     height: 25px;
     top: 0;
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     position: fixed;
     display: flex;
@@ -89,6 +93,9 @@ footer {
 }
 .nav-button-cluster:nth-child(3) {
     margin-left: 20%;
+}
+.nav-other-button {
+    font-size: 25px;
 }
 .nav-button {
     width: 125px;
@@ -512,8 +519,127 @@ h4 {
     width: 100%;
     height: 1200px;
 }
-.filter-box {
+.filter-cluster {
     width: 100%;
-    background-color: red;
     height: 150px;
+}
+.filter-button {
+    width: 40px;
+    background-color: white;
+    font-size: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-right: 80px;
+    z-index: 10;
+}
+.filter-button:hover {
+    background-color: rgb(175, 175, 175);
+}
+.filter-box-after {
+    display: block;
+    padding: 20px;
+    width: 90%;
+    background-color: white;
+    height: calc(100px - 20px);
+    transition: 1s all;
+    right: 0;
+    margin: auto;
+}
+.filter-box-after[data-status="hidden"] {
+    display: block; 
+    /* display: none; */
+    transition: all 1s;
+}
+.filter-box-after[data-status="show"] {
+    display: block;
+    transition: all 1s;
+}
+
+.slider-box {
+    width: 40%;
+    height: 80px;
+    float: left
+}
+.slider-label {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+.type-box {
+    width: calc(30% - 30px);
+    height: 100%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+.type-item {
+    float: left;
+    width: 33%;
+    font-size: 25px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.type-item > input {
+    font-size: inherit;
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: 0;
+    margin-right: 10px;
+
+}
+
+
+
+.gas-box {
+    width: calc(30% - 30px);
+    height: 100%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+.gas-item {
+    float: left;
+    width: 33%;
+    font-size: 25px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.gas-item > input {
+    font-size: inherit;
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: 0;
+    margin-right: 10px;
+
+}
+.gas-box-title {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
 }

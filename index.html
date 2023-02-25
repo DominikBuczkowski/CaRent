@@ -1,90 +1,100 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="wypożyczalnia">
-        <meta name="keywords" content="wypożyczalnia samochodów, wypożyczalnia, samochodów">
-        <meta name="author" content="Dominik Buczkowski">
-        <meta name="robots" content="noindex, nofollow">
-        
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="wypożyczalnia">
+    <meta name="keywords" content="wypożyczalnia samochodów, wypożyczalnia, samochodów">
+    <meta name="author" content="Dominik Buczkowski">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Wypożyczalnia</title>
+    <link rel="stylesheet" id="theme" href="/styles/style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="nouislider.css" rel="stylesheet">
+    <script src="nouislider.js"></script>
+    <script src="handle_filters.js"></script>
 
-        <title>Wypożyczalnia</title>
-
-
-        <link rel="stylesheet" id="theme" href="/styles/style.css">
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-        <link href="nouislider.css" rel="stylesheet">
-        <script src="nouislider.js"></script>
-
-    </head>
+</head>
 
 <body>
     <nav class="nav" id="nav">
+        
         <div class="nav-button-cluster">
-            
+
             <a href="osobowe.html" class="nav-button">
                 <div>
                     Osobowe
                 </div>
             </a>
+        
             <a href="ciezarowe.html" class="nav-button">
                 <div>
                     Ciężarowe
                 </div>
             </a>
+        
             <div class="nav-other-button">
-                <button value="DARK" id="theme_button"><i id="solar" class="fa-solid fa-moon"></i></button>
+                <button value="DARK" id="theme_button">
+                    <i id="solar" class="fa-solid fa-moon"></i>
+                </button>
             </div>
-            
-            
+
         </div>
+
         <div class="nav-logo-cluster">
+        
             <a href="index.html">
                 <img src="/img/nav_logo.png" height="45" alt="logo" id="logo">
             </a>
 
-            <div class="rect" id="diamond" onclick="ScrollToTop()">
-            </div>
+            <div class="rect" id="diamond" onclick="ScrollToTop()"></div>
+        
         </div>
+        
         <div class="nav-button-cluster">
+        
             <a href="kontakt.html" class="nav-button">
                 <div>
                     Kontakt
                 </div>
             </a>
+        
             <a href="onas.html" class="nav-button">
                 <div>
                     O nas
                 </div>
             </a>
+        
         </div>
-        
 
-        
     </nav>
-    
+
     <main>
+
         <div class="space">
             <h1>Polecane</h1>
         </div>
-        <section class="our-cars-cards" >
-            
+
+        <section class="our-cars-cards">
+
             <div class="prev-button">
+
                 <button id="prev-button" onclick="handlePrevClick()">
                     &lt;
                 </button>
+
             </div>
 
             <div class="next-button">
+
                 <button id="next-button" onclick="handleNextClick()">
                     &gt;
                 </button>
+
             </div>
 
 
@@ -120,21 +130,21 @@
                         <div class="info-price">
                             1000zł
                         </div>
-                        
+
                     </div>
                 </div>
 
-                <div class="card" >
+                <div class="card">
                     <img src="/img/cars/citi_2.png">
                 </div>
 
                 <div class="card" style="background-color: red;">
                     <img src="/img/cars/citi_1.png">
                 </div>
-                
+
             </div>
 
-            
+
             <div class="card-group" data-status="active" data-index="1">
                 <div class="card">
                     <div class="info-cluster">
@@ -167,7 +177,7 @@
                         <div class="info-price">
                             1000zł
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -178,7 +188,7 @@
                 <div class="card">
                     <img src="/img/cars/touran_1.png">
                 </div>
-                
+
             </div>
 
             <div class="card-group" data-status="after" data-index="2">
@@ -213,7 +223,7 @@
                         <div class="info-price">
                             1000zł
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -224,7 +234,7 @@
                 <div class="card">
                     <img src="img/cars/e36_1.png">
                 </div>
-                
+
             </div>
 
             <div class="card-group" data-status="back" data-index="4">
@@ -259,7 +269,7 @@
                         <div class="info-price">
                             1000zł
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -270,16 +280,16 @@
                 <div class="card">
                     <img src="/img/cars/polo_1.png">
                 </div>
-                
+
             </div>
 
-            
-            
-
-                        
 
 
-            
+
+
+
+
+
         </section>
 
         <section class="flota">
@@ -298,126 +308,202 @@
                                 <label>Ilość miejsc</label>
                             </div>
                             <div class="slider">
-                                <div id="slider" onclick="get_slider()"></div>
+                                <div id="slider" onclick="get_filters()"></div>
 
                                 <script src="handle_slider.js"></script>
                             </div>
                         </div>
-                    
+                        <div class="type-box">
+
+                            <div class="type-item">
+
+                                <input type="checkbox" name="Kompakt" id="Kompakt" oninput="get_filters()">
+
+                                <span>Kompakt</span>
+                            </div>
+
+                            <div class="type-item">
+
+                                <input type="checkbox" name="Normalne" id="Normalne" oninput="get_filters()">
+
+                                <span>Normalne</span>
+                            </div>
+
+                            <div class="type-item">
+
+                                <input type="checkbox" name="Suv" id="Suv" oninput="get_filters()">
+
+                                <span>Suv</span>
+                            </div>
+
+
+
+                            <div class="type-item">
+
+                                <input type="checkbox" name="Sportowe" class="checkbox-pop" id="Sportowe" oninput="get_filters()">
+
+                                <span>Sportowe</span>
+                            </div>
+
+                            <div class="type-item">
+
+                                <input type="checkbox" name="Limuzyny" id="Limuzyna" oninput="get_filters()">
+
+                                <span>Limuzyny</span>
+                            </div>
+
+                            <div class="type-item">
+
+                                <input type="checkbox" name="Van" style="clear: both" id="Van" oninput="get_filters()">
+
+                                <span>Van</span>
+                            </div>
+
+
+
+                        </div>
+                        <div class="gas-box">
+                            <div class="gas-box-title">
+                                Jakie paliwo?
+                            </div>
+
+                            <div class="gas-item">
+
+                                <input type="checkbox" name="Benzyna" id="Benzyna" oninput="get_filters()">
+
+                                <span>Benzyna</span>
+                            </div>
+
+                            <div class="gas-item">
+
+                                <input type="checkbox" name="Diesel" id="Diesel" oninput="get_filters()">
+
+                                <span>Diesel</span>
+                            </div>
+
+                            <div class="gas-item">
+
+                                <input type="checkbox" name="Elektryk" id="Elektryk" oninput="get_filters()">
+
+                                <span>Elektryk</span>
+                            </div>
+
+                        </div>
+
                     </form>
                 </div>
-                
-                
-                </div>
-            
+
+
+            </div>
+
             <div class="gen-block">
-                
+
                 <div class="gen-block-top">
-                    
+
                     <div class="buttons">
                         <div class="arrow-left">
                             &lt;
                         </div>
                         <div class="gen-block-img">
-                            <img src="img/cars/e36_1.png"  data-index="0" data-status="active">
+                            <img src="img/cars/e36_1.png" data-index="0" data-status="active">
                             <img src="img/cars/e36_2.png" data-index="1" data-status="hidden">
-                            <img src="img/cars/e36_2.png"  data-index="2" data-status="hidden">
+                            <img src="img/cars/e36_2.png" data-index="2" data-status="hidden">
                         </div>
                         <div class="arrow-right">
                             &gt;
                         </div>
                     </div>
-                    
-                    
-                   
-                    
-                    
-                    
+
+
+
+
+
+
                     <div class="gen-block-name">
                         <h2>BMW M3</h2>
                     </div>
-                    
+
                 </div>
-            <div class="aaa">
-                <div class="gen-block-info-cluster">
-                    <div class="gen-info-year">
-                        <i class="fa-regular fa-calendar-days"></i>&nbsp;2003
+                <div class="aaa">
+                    <div class="gen-block-info-cluster">
+                        <div class="gen-info-year">
+                            <i class="fa-regular fa-calendar-days"></i>&nbsp;2003
+                        </div>
+                        <div class="gen-info-seats">
+                            <i class="fa-solid fa-person"></i>&nbsp;5
+                        </div>
+
+                        <div class="gen-info-en" style="clear: both;">
+                            <i class="fa-regular fa-gas-pump"></i>&nbsp;benzyna
+                        </div>
+                        <div class="gen-info-hp">
+                            <i>HP</i>&nbsp;660
+                        </div>
                     </div>
-                    <div class="gen-info-seats">
-                        <i class="fa-solid fa-person"></i>&nbsp;5
+                    <div class="gen-block-price-cluster" style="clear: both;">
+                        <div class="gen-block-price-label">
+                            Cena wynajem za 1 tydzień
+                        </div>
+                        <div class="gen-block-price">
+                            3200zł
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gen-block">
+
+                <div class="gen-block-top">
+
+                    <div class="buttons">
+                        <div class="arrow-left">
+                            &lt;
+                        </div>
+                        <div class="gen-block-img">
+                            <img src="img/cars/e36_1.png" data-index="0" data-status="active">
+                            <img src="img/cars/e36_2.png" data-index="1" data-status="hidden">
+                            <img src="img/cars/e36_2.png" data-index="2" data-status="hidden">
+                        </div>
+                        <div class="arrow-right">
+                            &gt;
+                        </div>
                     </div>
 
-                    <div class="gen-info-en" style="clear: both;">
-                        <i class="fa-regular fa-gas-pump"></i>&nbsp;benzyna
-                    </div>
-                    <div class="gen-info-hp" >
-                        <i>HP</i>&nbsp;660
-                    </div>
-                </div>
-                <div class="gen-block-price-cluster" style="clear: both;">
-                    <div class="gen-block-price-label">
-                        Cena wynajem za 1 tydzień
-                    </div>
-                    <div class="gen-block-price">
-                        3200zł
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gen-block">
-                
-            <div class="gen-block-top">
-                
-                <div class="buttons">
-                    <div class="arrow-left">
-                        &lt;
-                    </div>
-                    <div class="gen-block-img">
-                        <img src="img/cars/e36_1.png"  data-index="0" data-status="active">
-                        <img src="img/cars/e36_2.png" data-index="1" data-status="hidden">
-                        <img src="img/cars/e36_2.png"  data-index="2" data-status="hidden">
-                    </div>
-                    <div class="arrow-right">
-                        &gt;
-                    </div>
-                </div>
-                
-                
-               
-                
-                
-                
-                <div class="gen-block-name">
-                    <h2>BMW M3</h2>
-                </div>
-                
-            </div>
-        <div class="aaa">
-            <div class="gen-block-info-cluster">
-                <div class="gen-info-year">
-                    <i class="fa-regular fa-calendar-days"></i>&nbsp;2003
-                </div>
-                <div class="gen-info-seats">
-                    <i class="fa-solid fa-person"></i>&nbsp;5
-                </div>
 
-                <div class="gen-info-en" style="clear: both;">
-                    <i class="fa-regular fa-gas-pump"></i>&nbsp;benzyna
+
+
+
+
+                    <div class="gen-block-name">
+                        <h2>BMW M3</h2>
+                    </div>
+
                 </div>
-                <div class="gen-info-hp" >
-                    <i>HP</i>&nbsp;660
+                <div class="aaa">
+                    <div class="gen-block-info-cluster">
+                        <div class="gen-info-year">
+                            <i class="fa-regular fa-calendar-days"></i>&nbsp;2003
+                        </div>
+                        <div class="gen-info-seats">
+                            <i class="fa-solid fa-person"></i>&nbsp;5
+                        </div>
+
+                        <div class="gen-info-en" style="clear: both;">
+                            <i class="fa-regular fa-gas-pump"></i>&nbsp;benzyna
+                        </div>
+                        <div class="gen-info-hp">
+                            <i>HP</i>&nbsp;660
+                        </div>
+                    </div>
+                    <div class="gen-block-price-cluster" style="clear: both;">
+                        <div class="gen-block-price-label">
+                            Cena wynajem za 1 tydzień
+                        </div>
+                        <div class="gen-block-price">
+                            3200zł
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="gen-block-price-cluster" style="clear: both;">
-                <div class="gen-block-price-label">
-                    Cena wynajem za 1 tydzień
-                </div>
-                <div class="gen-block-price">
-                    3200zł
-                </div>
-            </div>
-        </div>
-    </div>
 
 
             <div class="gen-block-text">
@@ -429,20 +515,21 @@
                 </div>
                 <div class="text-text">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                
+
             </div>
             <div class="gen-block">
-                
+
                 <div class="gen-block-top">
-                    
+
                     <div class="buttons">
                         <div class="gen-block-img">
-                            <img src="img/cars/e36_1.png" class="img-test" id="test"
-                            data-status="active"
-                            onclick="
+                            <img src="img/cars/e36_1.png" class="img-test" id="test" data-status="active" onclick="
                             e36++;
                             if (e36 > 2) {
                                 e36 = 1;
@@ -453,47 +540,48 @@
                             }
                             
 
-                            ">                        </div>
+                            ">
+                        </div>
                     </div>
                     <div class="gen-block-name">
                         <h2>BMW M3</h2>
-                        
+
                     </div>
                     <script>
                         var e36 = 1;
-                        
+
 
 
                     </script>
-                    
-                </div>
-            <div class="aaa">
-                <h4>sportowe</h4>
-                <div class="gen-block-info-cluster">
-                    <div class="gen-info-year">
-                        <i class="fa-regular fa-calendar-days"></i>&nbsp;2003
-                    </div>
-                    <div class="gen-info-seats">
-                        <i class="fa-solid fa-person"></i>&nbsp;5
-                    </div>
 
-                    <div class="gen-info-en" style="clear: both;">
-                        <i class="fa-regular fa-gas-pump"></i>&nbsp;benzyna
-                    </div>
-                    <div class="gen-info-hp" >
-                        <i>HP</i>&nbsp;660
-                    </div>
                 </div>
-                <div class="gen-block-price-cluster" style="clear: both;">
-                    <div class="gen-block-price-label">
-                        Cena wynajem za 1 tydzień
+                <div class="aaa">
+                    <h4>sportowe</h4>
+                    <div class="gen-block-info-cluster">
+                        <div class="gen-info-year">
+                            <i class="fa-regular fa-calendar-days"></i>&nbsp;2003
+                        </div>
+                        <div class="gen-info-seats">
+                            <i class="fa-solid fa-person"></i>&nbsp;5
+                        </div>
+
+                        <div class="gen-info-en" style="clear: both;">
+                            <i class="fa-regular fa-gas-pump"></i>&nbsp;benzyna
+                        </div>
+                        <div class="gen-info-hp">
+                            <i>HP</i>&nbsp;660
+                        </div>
                     </div>
-                    <div class="gen-block-price">
-                        3200zł
+                    <div class="gen-block-price-cluster" style="clear: both;">
+                        <div class="gen-block-price-label">
+                            Cena wynajem za 1 tydzień
+                        </div>
+                        <div class="gen-block-price">
+                            3200zł
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
 
     </main>
@@ -501,33 +589,34 @@
         <div class="footer-main">
             <div class="footer-block">
                 <a href="osobowe.html">Samochody osobowe</a>
-                    </br>
+                </br>
                 <a href="ciezarowe.html">Samochody ciężarowe</a>
-                    </br>
+                </br>
                 <a href="javascript:void">Zgłoś stłuczkę</a>
             </div>
             <div class="footer-block">
 
                 <button onclick="download_regulamin()">Regulamin</button>
-                    </br>
-                    <button onclick="download_rodo()">rodo</button>
-                    </br>
-                    <button onclick="download_dokumenty()">dokumenty</button>
+                </br>
+                <button onclick="download_rodo()">rodo</button>
+                </br>
+                <button onclick="download_dokumenty()">dokumenty</button>
             </div>
             <div class="footer-block">
                 <a href="javascript:void()">O nas</a>
-                    </br>
+                </br>
                 <a href="javascript:void()">Kontakt</a>
-                    </br>
+                </br>
                 <a href="javascript:void()">Jak dojechać?</a>
             </div>
         </div>
         <div class="footer-lower">
-            CaRent 	&#174;
+            CaRent &#174;
         </div>
 
     </footer>
     <script src="main.js"></script>
     <script src="download_files.js"></script>
 </body>
+
 </html>

@@ -29,7 +29,7 @@
             $paliwo = $row['paliwo'];
             $typ = $row['typ'];
 
-            $block_values = [$seats];
+            $block_values = [$seats, $paliwo, $typ];
 
             $blockid = $model.$id;
             
@@ -38,7 +38,7 @@
             <script>
                         var '.$model.' = 1;
 
-                        var '.$blockid.'_value = ['.$block_values[0].'];
+                        var '.$blockid.'_value = ['.$seats.',"'.$paliwo.'","'.$typ.'"];
                         
 
 

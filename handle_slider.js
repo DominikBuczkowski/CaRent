@@ -14,17 +14,3 @@ noUiSlider.create(slider, {
     
 });
 
-const get_slider = () => {
-    var slider_value = slider.noUiSlider.get();
-    console.log(slider_value)
-}
-
-// <!-- <div class="slider-box">
-// <div class="slider-label">
-//     <label>Ilość miejsc</label>
-// </div>
-// <div id="slider" onclick="get_slider()"></div>
-
-// <script src="handle_slider.js"></script>
-
-// </div> -->

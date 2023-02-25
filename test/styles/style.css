@@ -552,8 +552,8 @@ h4 {
     margin: auto;
 }
 .filter-box-after[data-status="hidden"] {
-    display: block; 
-    /* display: none; */
+    /* display: block;  */
+    display: none;
     transition: all 1s;
 }
 .filter-box-after[data-status="show"] {
