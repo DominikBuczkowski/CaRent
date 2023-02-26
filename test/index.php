@@ -16,7 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link href="nouislider.css" rel="stylesheet">
     <script src="nouislider.js"></script>
-    <script src="handle_filters.js"></script>
+    <script src="handle_filters.js" defer></script>
+    <script>
+        var cars = [];
+    </script>
 
 </head>
 
@@ -403,8 +406,44 @@
             require 'print.php';
             aaa();
         ?>
+        <button onclick="hide_car()" class="selected-car" id="HD1">
+            <div>
+                
+            </div>
+        </button>
+        <div class="selected-car-item" id="HD2">
 
-            
+            <div class="selected-car-info-cluster">
+                <div class="selected-car-name" id="name">
+                    $MODEL
+                </div>
+                <div class="selected-car-image">
+                    <img src="img/cars/f40_1.png" alt="$img" id="img" width="720" height="250">
+                </div>
+
+                <div class="selected-car-type" id="type">
+                    $Typ
+                </div>
+                <div class="selected-car-info">
+                    <div class="selected-car-info-item" id="year">
+                        $rocznik
+                    </div>
+                    <div class="selected-car-info-item" id="seats">
+                        $miejsca
+                    </div>
+                    <div class="selected-car-info-item" id="gas">
+                        $benzyna
+                    </div>
+                    <div class="selected-car-info-item" id="hp">
+                        $konie
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
         </section>
 
     </main>
@@ -440,6 +479,29 @@
     </footer>
     <script src="main.js"></script>
     <script src="download_files.js"></script>
+    <script>
+        function select(block) {
+            var HD1 = document.getElementById('HD1');
+            var HD2 = document.getElementById('HD2');
+
+            var info_block = block.childNodes[1];
+            var info = String(info_block.innerHTML);
+            info = info.split(' ');
+
+            var name = document.getElementById('name').innerHTML = info[0] + " " + info[1];
+            var type = document.getElementById('type').innerHTML = info[2];
+            var year = document.getElementById('year').innerHTML = info[3];
+            var seats = document.getElementById('seats').innerHTML = info[4];
+            var gas = document.getElementById('gas').innerHTML = info[5];
+            var hp = document.getElementById('hp').innerHTML = info[6];
+            var img = document.getElementById('img').src = "img/cars/" + info[7];
+            HD1.classList.replace('selected-car-hidden', 'selected-car');
+            HD2.classList.replace('selected-car-item-hidden','selected-car-item');
+
+            
+            
+        }
+    </script>
 </body>
 
 </html>

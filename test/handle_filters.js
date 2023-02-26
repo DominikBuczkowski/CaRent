@@ -49,7 +49,7 @@ function get_filters() {
         filters.push('suv');
     }
     if (Sportowe.checked === true) {
-        filters.push('sportowe');
+        filters.push('Sportowe');
     }
     if (Limuzyna.checked === true) {
         filters.push('limuzyna');
@@ -59,7 +59,6 @@ function get_filters() {
     }
 
     var statments = [Benzyna.checked === false, Diesel.checked === false,Elektryk.checked === false, Kompakt.checked === false, Normalne.checked === false, Suv.checked === false, Sportowe.checked === false, Limuzyna.checked === false, Van.checked === false];
-
 
 
     var M31 = document.getElementById('M31');
@@ -85,3 +84,12 @@ function get_filters() {
     // }
     
 }
+
+function hide_car() {
+    var HD1 = document.getElementById('HD1');
+    var HD2 = document.getElementById('HD2');
+    HD1.classList.replace('selected-car', 'selected-car-hidden');
+    HD2.classList.replace('selected-car-item', 'selected-car-item-hidden');
+    
+}
+
