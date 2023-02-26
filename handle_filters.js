@@ -1,15 +1,16 @@
 
 function get_filters() {
 
-    var slider_value = slider.noUiSlider.get();
+    // var slider_value = slider.noUiSlider.get();
+
+    var slider_value = [0,0];
     
     var Benzyna = document.getElementById('Benzyna'),
 
     Diesel = document.getElementById('Diesel'),
 
-
-
     Elektryk = document.getElementById('Elektryk'),
+
 
     Kompakt = document.getElementById('Kompakt'),
 
@@ -24,37 +25,71 @@ function get_filters() {
     Van = document.getElementById('Van');
 
 
-    var filters = [slider_value[0], slider_value[1], 'gas', 'gas', 'gas', 'type', 'type', 'type', 'type', 'type', 'type'];
+    var filters = [];
+
+    filters.push(slider_value[0], slider_value[1]);
 
     if (Benzyna.checked === true) {
-        filters[2] = 'Benzyna';
+        filters.push('Benzyna');
     }
     if (Diesel.checked === true) {
-        filters[3] = 'Diesel';
+        filters.push('diesel');
     }
     if (Elektryk.checked === true) {
-        filters[4] = 'Elektryk';
+        filters.push('elektryk');
     }
 
     if (Kompakt.checked === true) {
-        filters[5] = 'Kompakt';
+        filters.push('kompakt');
     }
     if (Normalne.checked === true) {
-        filters[6] = 'Normalne';
+        filters.push('normalne');
     }
     if (Suv.checked === true) {
-        filters[7] = 'Suv';
+        filters.push('suv');
     }
     if (Sportowe.checked === true) {
-        filters[8] = 'Sportowe';
+        filters.push('Sportowe');
     }
     if (Limuzyna.checked === true) {
-        filters[9] = 'Limuzyna';
+        filters.push('limuzyna');
     }
     if (Van.checked === true) {
-        filters[10] = 'Van';
+        filters.push('van');
     }
 
+    var statments = [Benzyna.checked === false, Diesel.checked === false,Elektryk.checked === false, Kompakt.checked === false, Normalne.checked === false, Suv.checked === false, Sportowe.checked === false, Limuzyna.checked === false, Van.checked === false];
+
+
+    var M31 = document.getElementById('M31');
+
+    if (!statments.includes(false)) {
+        M31.style.display = "block";
+    }
+
+    else if (filters.some(r=> M31_value.includes(r))) {
+        M31.style.display = "block";
+    }
+    else {
+        M31.style.display = "none";
+    }
     
-    console.log(filters);
+
+    // if (!filters.some(r=> M31_value.includes(r))) {
+    //     console.log('false');
+    //     block.style.display = "none";
+    // }
+    // else {
+    //     block.style.display = "block";
+    // }
+    
 }
+
+function hide_car() {
+    var HD1 = document.getElementById('HD1');
+    var HD2 = document.getElementById('HD2');
+    HD1.classList.replace('selected-car', 'selected-car-hidden');
+    HD2.classList.replace('selected-car-item', 'selected-car-item-hidden');
+    
+}
+

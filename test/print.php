@@ -1,6 +1,6 @@
 <?php
 
-    function aaa() {
+    function getcars() {
         require 'conn.php';
 
         $cars = [];
@@ -13,13 +13,7 @@
         die("Connection failed: " . $conn->connect_error);
         }
              $sql = "SELECT * from osobowe ORDER BY RAND()";
-          
 
-        
-
-       
-
-        
         $query_result = $conn->query($sql);
 
         if ($query_result->num_rows > 0) {
@@ -54,7 +48,7 @@
             echo '
             
             <div class="gen-block" id="'.$blockid.'">
-            <span style="display:none" class="'.$blockid.'">'.$marka.' '.$model.' '.$typ.' '.$rocznik.' '.$seats.' '.$paliwo.' '.$hp.' '.$img1.' '.$img2.'</span>
+            <span style="display:none" class="'.$blockid.'">'.$marka.' '.$model.' '.$typ.' '.$rocznik.' '.$seats.' '.$paliwo.' '.$hp.' '.$img1.' '.$img2.' '.$cena.'</span>
             
 
             <script>

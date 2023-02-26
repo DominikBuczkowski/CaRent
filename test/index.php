@@ -17,9 +17,7 @@
     <link href="nouislider.css" rel="stylesheet">
     <script src="nouislider.js"></script>
     <script src="handle_filters.js" defer></script>
-    <script>
-        var cars = [];
-    </script>
+    <script src="select_car.js" async></script>
 
 </head>
 
@@ -404,16 +402,16 @@
 
         
             require 'print.php';
-            aaa();
+            getcars();
         ?>
-        <button onclick="hide_car()" class="selected-car" id="HD1">
+        <button onclick="hide_car()" class="selected-car-hidden" id="HD1">
             <div>
                 
             </div>
         </button>
-        <div class="selected-car-item" id="HD2">
+        <div class="selected-car-item-hidden" id="HD2">
 
-            <div class="selected-car-info-cluster">
+            <div class="selected-car-info-cluster" onclick="calc()">
                 <div class="selected-car-name" id="name">
                     $MODEL
                 </div>
@@ -437,8 +435,20 @@
                     <div class="selected-car-info-item" id="hp">
                         $konie
                     </div>
+                    <div class="selected-car-info-item" id="cena">
+                        $cena
+                    </div>
                 </div>
+                <div class="calculator">
+                <script>
+                        
 
+                        </script>
+                    <input type="date" min="" id="date-start" value="" oninput="calc()">
+                    <input type="date" min="" id="date-end" value="" oninput="calc()">
+                    
+                </div>
+                    
             </div>
 
         </div>
@@ -479,29 +489,6 @@
     </footer>
     <script src="main.js"></script>
     <script src="download_files.js"></script>
-    <script>
-        function select(block) {
-            var HD1 = document.getElementById('HD1');
-            var HD2 = document.getElementById('HD2');
-
-            var info_block = block.childNodes[1];
-            var info = String(info_block.innerHTML);
-            info = info.split(' ');
-
-            var name = document.getElementById('name').innerHTML = info[0] + " " + info[1];
-            var type = document.getElementById('type').innerHTML = info[2];
-            var year = document.getElementById('year').innerHTML = info[3];
-            var seats = document.getElementById('seats').innerHTML = info[4];
-            var gas = document.getElementById('gas').innerHTML = info[5];
-            var hp = document.getElementById('hp').innerHTML = info[6];
-            var img = document.getElementById('img').src = "img/cars/" + info[7];
-            HD1.classList.replace('selected-car-hidden', 'selected-car');
-            HD2.classList.replace('selected-car-item-hidden','selected-car-item');
-
-            
-            
-        }
-    </script>
 </body>
 
 </html>
