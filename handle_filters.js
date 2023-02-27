@@ -1,6 +1,10 @@
 function get_filters() {
 
-    var slider_value = [0,0];
+    var slider = document.getElementById('slider');
+    var aa = slider.noUiSlider.get()
+
+    console.log(aa);
+    // var slider_value = slider
     
     var Benzyna = document.getElementById('Benzyna'),
 

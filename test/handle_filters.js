@@ -4,6 +4,8 @@ function get_filters() {
     // var slider_value = slider.noUiSlider.get();
 
     var slider_value = [0,0];
+
+    console.log(slider_value)
     
     var Benzyna = document.getElementById('Benzyna'),
 
@@ -25,49 +27,50 @@ function get_filters() {
     Van = document.getElementById('Van');
 
 
-    var filters = [];
+    var filter_seats = [];
+    var filter_gas = [];
+    var filter_type = [];
 
-    filters.push(slider_value[0], slider_value[1]);
+    filter_seats.push(slider_value[0], slider_value[1]);
 
     if (Benzyna.checked === true) {
-        filters.push('Benzyna');
+        filter_gas.push('Benzyna');
     }
     if (Diesel.checked === true) {
-        filters.push('diesel');
+        filter_gas.push('diesel');
     }
     if (Elektryk.checked === true) {
-        filters.push('elektryk');
+        filter_gas.push('elektryk');
     }
 
     if (Kompakt.checked === true) {
-        filters.push('kompakt');
+        filter_type.push('kompakt');
     }
     if (Normalne.checked === true) {
-        filters.push('normalne');
+        filter_type.push('normalne');
     }
     if (Suv.checked === true) {
-        filters.push('suv');
+        filter_type.push('suv');
     }
     if (Sportowe.checked === true) {
-        filters.push('Sportowe');
+        filter_type.push('Sportowe');
     }
     if (Limuzyna.checked === true) {
-        filters.push('limuzyna');
+        filter_type.push('limuzyna');
     }
     if (Van.checked === true) {
-        filters.push('van');
+        filter_type.push('van');
     }
 
-    var statments = [Benzyna.checked === false, Diesel.checked === false,Elektryk.checked === false, Kompakt.checked === false, Normalne.checked === false, Suv.checked === false, Sportowe.checked === false, Limuzyna.checked === false, Van.checked === false];
+    var statment_gas = [Benzyna.checked === false, Diesel.checked === false,Elektryk.checked === false];
+
+    var statment_type = [Kompakt.checked === false, Normalne.checked === false, Suv.checked === false, Sportowe.checked === false, Limuzyna.checked === false, Van.checked === false];
 
 
     var M31 = document.getElementById('M31');
 
-    if (!statments.includes(false)) {
-        M31.style.display = "block";
-    }
 
-    else if (filters.some(r=> M31_value.includes(r))) {
+    if ((filter_type.some(r=> M31_value.includes(r)) || !statment_type.includes(false)) && (filter_gas.some(r=> M31_value.includes(r)) || !statment_gas.includes(false)) && (filter_seats[0] <= M31_value[0] || filter_seats[1] >= M31_value[0])) {
         M31.style.display = "block";
     }
     else {
