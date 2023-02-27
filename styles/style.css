@@ -199,7 +199,7 @@ main {
     width: 400px;
     height: 200px;
     position: absolute;
-    transform: translateX(170%) scale(0.4);
+    transform: translateX(150%) scale(0.4);
     transition: 1s;
     
     
@@ -227,7 +227,7 @@ main {
     width: 400px;
     height: 200px;
     position: absolute;
-    transform: translateX(-170%) scale(0.4);
+    transform: translateX(-150%) scale(0.4);
     transition: 1s;
 }
 
@@ -617,7 +617,7 @@ h4 {
 .type-item {
     float: left;
     width: 33%;
-    font-size: 25px;
+    font-size: 20px;
     height: 30px;
     display: flex;
     align-items: center;
