@@ -364,9 +364,7 @@
 
                         </div>
                         <div class="gas-box">
-                            <div class="gas-box-title">
-                                Jakie paliwo?
-                            </div>
+
 
                             <div class="gas-item">
 
@@ -387,6 +385,12 @@
                                 <input type="checkbox" name="Elektryk" id="Elektryk" oninput="get_filters()">
 
                                 <span>Elektryk</span>
+                            </div>
+                            <div class="gas-item">
+
+                                <input type="checkbox" name="gaz" disabled id="Elektryk" oninput="get_filters()">
+
+                                <span>Gaz</span>
                             </div>
 
                         </div>
