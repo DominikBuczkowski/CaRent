@@ -471,9 +471,6 @@
                         <span id="final">11111zl</span>
                         <span class="disc"><s id="discount">22222zl</s></span>
                     </div>
-                    <div class="calc-disc-cost">
-                        
-                    </div>
                     
                 </div>
                     
