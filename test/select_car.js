@@ -23,6 +23,7 @@
     // var a = current_date.split(" ");
 
     var current_day = current_date.getUTCDate();
+    var current_day = current_day + 1;
 
     // if (current_day <= 9) {
     //     current_day = "0"+current_day;
@@ -47,11 +48,20 @@ function calc() {
     let start = document.getElementById('date-start').value;
     let end = document.getElementById('date-end').value;
 
+    console.log(start);
+
     let start_value = start.split('-');
-    let end_value = start.split('-');
+    let end_value = end.split('-');
 
-    end_date = new Date(start_value[0], start_value[1], start_value[2])
+    start_month = start_value[1]
 
-    console.log(end_date)
+    start_date = new Date(start_value[0], start_month, start_value[2])
+    end_date = new Date(end_value[0], end_value[1], end_value[2])
+
+    diff = end_date - start_date;
+
+    days = Math.ceil(diff / (1000 * 3600 * 24));
+
+    console.log(days)
 
     }

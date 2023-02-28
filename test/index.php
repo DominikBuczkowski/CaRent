@@ -18,6 +18,7 @@
     <script src="nouislider.js"></script>
     <script src="handle_filters.js"></script>
     <script src="select_car.js" async></script>
+</script>
 
 </head>
 
@@ -303,8 +304,6 @@
                 </div>
                 <div class="filter-box-after" id="filter-box-after" data-status="hidden">
 
-
-
                     <form target="" method="post">
                         <div class="slider-box">
                             <div class="slider-label">
@@ -460,7 +459,7 @@
                    
                     <div class="calc-top">
                         <div class="data-input">
-                            <input type="date" min="" id="date-start" value="">
+                            <input type="date" min="" id="date-start" value="" oninput="calc()">
                         </div>
                         <div class="data-input">
                         <input type="date" min="" id="date-end" value="" oninput="calc()">
