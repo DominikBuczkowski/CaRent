@@ -460,7 +460,7 @@
                    
                     <div class="calc-top">
                         <div class="data-input">
-                            <input type="date" min="" id="date-start" value="" oninput="calc()">
+                            <input type="date" min="" id="date-start" value="">
                         </div>
                         <div class="data-input">
                         <input type="date" min="" id="date-end" value="" oninput="calc()">

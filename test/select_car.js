@@ -6,14 +6,9 @@
     let info_block = block.childNodes[1];
     let info = String(info_block.innerHTML);
     info = info.split(' ');
-
     
     calc_cena = info[9];
     
-    
-
-    
-
     document.getElementById('name').innerHTML = info[0] + " " + info[1];
     document.getElementById('type').innerHTML = info[2];
     document.getElementById('year').innerHTML = "<i class='fa-regular fa-calendar-days'></i>&nbsp;"+info[3];
@@ -24,37 +19,39 @@
     HD1.classList.replace('selected-car-hidden', 'selected-car');
     HD2.classList.replace('selected-car-item-hidden','selected-car-item');
 
-    var start = document.getElementById('date-start');
-    var end = document.getElementById('date-end');
-
     var current_date = new Date();
     // var a = current_date.split(" ");
 
     var current_day = current_date.getUTCDate();
-    var end_day = current_day + 1;
 
-    if (current_day <= 9) {
-        current_day = "0"+current_day;
-    }
-    console.log(end_day)
+    // if (current_day <= 9) {
+    //     current_day = "0"+current_day;
+    // }
 
-    var current_Month = current_date.getUTCMonth();
+    var current_Month = 1 + current_date.getMonth();
+    
     if (current_Month <= 9) {
         current_Month = "0"+current_Month;
     }
     var current_year = current_date.getFullYear();
 
+    var date = current_year + "-" + current_Month + "-" + current_day;
 
-    var date = current_year  + "-" + current_Month + "-" + current_day;
-    var end_date = current_year  + "-" + current_Month + "-" + current_day;
+    var start = document.getElementById('date-start');
 
     start.value = date;
     start.min = date;
 
-    
-    
 };
 function calc() {
-    console.log(calc_cena)
+    let start = document.getElementById('date-start').value;
+    let end = document.getElementById('date-end').value;
+
+    let start_value = start.split('-');
+    let end_value = start.split('-');
+
+    end_date = new Date(start_value[0], start_value[1], start_value[2])
+
+    console.log(end_date)
 
     }
