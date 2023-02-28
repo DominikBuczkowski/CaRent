@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link href="nouislider.css" rel="stylesheet">
     <script src="nouislider.js"></script>
-    <script src="handle_filters.js" defer></script>
+    <script src="handle_filters.js"></script>
     <script src="select_car.js" async></script>
 
 </head>
@@ -303,13 +303,15 @@
                 </div>
                 <div class="filter-box-after" id="filter-box-after" data-status="hidden">
 
+
+
                     <form target="" method="post">
                         <div class="slider-box">
                             <div class="slider-label">
                                 <label>Ilość miejsc</label>
                             </div>
                             <div class="slider">
-                                <div id="slider" onclick="get_filters()"></div>
+                                <div id="slider" onclick="get_filters(cars)"></div>
 
                                 <script src="handle_slider.js"></script>
                             </div>
@@ -318,21 +320,21 @@
 
                             <div class="type-item">
 
-                                <input type="checkbox" name="Kompakt" id="Kompakt" oninput="get_filters()">
+                                <input type="checkbox" name="Kompakt" id="Kompakt" oninput="get_filters(cars)">
 
                                 <span>Kompakt</span>
                             </div>
 
                             <div class="type-item">
 
-                                <input type="checkbox" name="Normalne" id="Normalne" oninput="get_filters()">
+                                <input type="checkbox" name="Normalne" id="Normalne" oninput="get_filters(cars)">
 
                                 <span>Normalne</span>
                             </div>
 
                             <div class="type-item">
 
-                                <input type="checkbox" name="Suv" id="Suv" oninput="get_filters()">
+                                <input type="checkbox" name="Suv" id="Suv" oninput="get_filters(cars)">
 
                                 <span>Suv</span>
                             </div>
@@ -341,21 +343,21 @@
 
                             <div class="type-item">
 
-                                <input type="checkbox" name="Sportowe" class="checkbox-pop" id="Sportowe" oninput="get_filters()">
+                                <input type="checkbox" name="Sportowe" class="checkbox-pop" id="Sportowe" oninput="get_filters(cars)">
 
                                 <span>Sportowe</span>
                             </div>
 
                             <div class="type-item">
 
-                                <input type="checkbox" name="Limuzyny" id="Limuzyna" oninput="get_filters()">
+                                <input type="checkbox" name="Limuzyny" id="Limuzyna" oninput="get_filters(cars)">
 
                                 <span>Limuzyny</span>
                             </div>
 
                             <div class="type-item">
 
-                                <input type="checkbox" name="Van" style="clear: both" id="Van" oninput="get_filters()">
+                                <input type="checkbox" name="Van" style="clear: both" id="Van" oninput="get_filters(cars)">
 
                                 <span>Van</span>
                             </div>
@@ -368,27 +370,27 @@
 
                             <div class="gas-item">
 
-                                <input type="checkbox" name="Benzyna" id="Benzyna" oninput="get_filters()">
+                                <input type="checkbox" name="Benzyna" id="Benzyna" oninput="get_filters(cars)">
 
                                 <span>Benzyna</span>
                             </div>
 
                             <div class="gas-item">
 
-                                <input type="checkbox" name="Diesel" id="Diesel" oninput="get_filters()">
+                                <input type="checkbox" name="Diesel" id="Diesel" oninput="get_filters(cars)">
 
                                 <span>Diesel</span>
                             </div>
 
                             <div class="gas-item">
 
-                                <input type="checkbox" name="Elektryk" id="Elektryk" oninput="get_filters()">
+                                <input type="checkbox" name="Elektryk" id="Elektryk" oninput="get_filters(cars)">
 
                                 <span>Elektryk</span>
                             </div>
                             <div class="gas-item">
 
-                                <input type="checkbox" name="gaz" disabled id="Elektryk" oninput="get_filters()">
+                                <input type="checkbox" name="gaz" disabled id="Elektryk" oninput="get_filters(cars)">
 
                                 <span>Gaz</span>
                             </div>
@@ -493,6 +495,7 @@
     </footer>
     <script src="main.js"></script>
     <script src="download_files.js"></script>
+
 </body>
 
 </html>

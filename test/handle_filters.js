@@ -1,8 +1,8 @@
+var cars = [];
 
-function get_filters() {
+function get_filters(cars) {
 
     var slider_value = slider.noUiSlider.get();
-
     
     var Benzyna = document.getElementById('Benzyna'),
 
@@ -31,14 +31,14 @@ function get_filters() {
         filter_gas.push('Benzyna');
     }
     if (Diesel.checked === true) {
-        filter_gas.push('diesel');
+        filter_gas.push('Diesel');
     }
     if (Elektryk.checked === true) {
-        filter_gas.push('elektryk');
+        filter_gas.push('Elektryk');
     }
 
     if (Kompakt.checked === true) {
-        filter_type.push('kompakt');
+        filter_type.push('Kompakt');
     }
     if (Normalne.checked === true) {
         filter_type.push('normalne');
@@ -53,7 +53,7 @@ function get_filters() {
         filter_type.push('limuzyna');
     }
     if (Van.checked === true) {
-        filter_type.push('van');
+        filter_type.push('Minivan');
     }
 
     var statment_gas = [Benzyna.checked === false, Diesel.checked === false,Elektryk.checked === false];
@@ -64,23 +64,55 @@ function get_filters() {
     var M31 = document.getElementById('M31');
 
 
-    if ((filter_type.some(r=> M31_value.includes(r)) || !statment_type.includes(false)) && (filter_gas.some(r=> M31_value.includes(r)) || !statment_gas.includes(false)) && (slider_value[0] <= M31_value[0] && slider_value[1] >= M31_value[0])) {
-        M31.style.display = "block";
-    }
-    
-    else {
-        M31.style.display = "none";
-    }
 
-    
+    cars.forEach(b => {
+        let car = document.getElementById(b);
 
-    // if (!filters.some(r=> M31_value.includes(r))) {
-    //     console.log('false');
-    //     block.style.display = "none";
-    // }
+        let car_block = car.childNodes[1];
+        let car_value = String(car_block.innerHTML);
+        car_value = car_value.split(' ');
+
+        console.log(car_value);
+
+    //     if ((filter_type.some(r=> car_value.includes(r)) || !statment_type.includes(false)) && (filter_gas.some(r=> car_value.includes(r)) || !statment_gas.includes(false)) && (slider_value[0] <= car_value[0] && slider_value[1] >= car_value[0])) {
+    //     car.style.display = "block";
+        
+    //     }   
+    
     // else {
-    //     block.style.display = "block";
+    //     car.style.display = "none";
     // }
+
+    slider_low = Math.floor(slider_value[0]);
+    slider_top= Math.floor(slider_value[1]);
+
+    if(
+        (
+            filter_gas.some(g=> car_value.includes(g)) || !statment_gas.includes(false)
+        ) && (
+
+            filter_type.some(t=> car_value.includes(t)) ||
+            !statment_type.includes(false)
+        ) && (
+            slider_low <= car_value[4] && slider_top >= car_value[4]
+
+        )
+    ) {
+        console.log('matched: ', car);
+        car.style.display = "block";
+        console.log(slider_low)
+    }
+    else {
+        car.style.display = "none";
+        console.log(slider_low)
+    }
+
+})
+
+
+
+    
+
     
 }
 

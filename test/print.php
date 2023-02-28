@@ -53,12 +53,16 @@
 
             <script>
                         var '.$model.' = 1;
+                        
 
                         var '.$blockid.'_value = ['.$seats.',"'.$paliwo.'","'.$typ.'"];
 
                         cars.push("'.$blockid.'");
 
+
                         var '.$blockid.'_info = ["'.$marka.'","'.$model.'",'.$seats.',"'.$paliwo.'","'.$typ.'",'.$cena.'];
+
+                        
 
                     </script>
 
