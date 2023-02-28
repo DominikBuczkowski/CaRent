@@ -410,12 +410,12 @@
             require 'print.php';
             getcars();
         ?>
-        <button onclick="hide_car()" class="selected-car-hidden" id="HD1">
+        <button onclick="hide_car()" class="selected-car" id="HD1">
             <div>
                 
             </div>
         </button>
-        <div class="selected-car-item-hidden" id="HD2">
+        <div class="selected-car-item" id="HD2">
 
             <div class="selected-car-info-cluster" onclick="calc()">
                 <div class="selected-car-name" id="name">
@@ -446,19 +446,41 @@
                     </div>
                 </div>
                 <div class="calculator">
-                <script>
-                        
+                    <div class="calc-label-cluster">
 
-                        </script>
-                    <input type="date" min="" id="date-start" value="" oninput="calc()">
-                    <input type="date" min="" id="date-end" value="" oninput="calc()">
+                        <div class="calc-label">
+                            <h3>Data wypożyczenia</h3>
+                        </div>
+                        
+                        <div class="calc-label">
+                            <h3>Data zwrotu</h3>
+                        </div>
+                        
+                    </div>
+                   
+                    <div class="calc-top">
+                        <div class="data-input">
+                            <input type="date" min="" id="date-start" value="" oninput="calc()">
+                        </div>
+                        <div class="data-input">
+                        <input type="date" min="" id="date-end" value="" oninput="calc()">
+                        </div>
+                        
+                    </div>
+                    <div class="calc-cost">
+                        <span id="final">11111zl</span>
+                        <span class="disc"><s id="discount">22222zl</s></span>
+                    </div>
+                    <div class="calc-disc-cost">
+                        
+                    </div>
                     
                 </div>
                     
             </div>
 
         </div>
-
+        
 
         </section>
 
