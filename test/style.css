@@ -810,17 +810,19 @@ h4 {
     border: none;
     font-size: 150%;
 }
+input[type="date"]:hover {
+    font-size: 170%;
+    font-weight: 600;
+}
 input[type="date"]::-webkit-calendar-picker-indicator {
     background: transparent;
-    bottom: 0;
     color: transparent;
     cursor: pointer;
     height: auto;
-    left: 0;
     position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
+    width: 12%;
+    height: 5%;
+    transform: translateX(40%);
 }
 .calc-cost {
     width: 100%;

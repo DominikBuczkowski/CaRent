@@ -1,4 +1,8 @@
     var calc_cena = 0;
+
+    let date_array = [];
+    let end_array = [];
+
     function select(block) {
     var HD1 = document.getElementById('HD1');
     var HD2 = document.getElementById('HD2');
@@ -19,35 +23,13 @@
     HD1.classList.replace('selected-car-hidden', 'selected-car');
     HD2.classList.replace('selected-car-item-hidden','selected-car-item');
 
-    // var current_date = new Date();
-    // // var a = current_date.split(" ");
+    document.getElementById('final').innerText = info[9];
 
-    // var current_day = current_date.getUTCDate();
-    // var current_day = current_day + 1;
 
-    // if (current_day <= 9) {
-    //     current_day = "0"+current_day;
-    // }
-
-    // var current_Month = 1 + current_date.getMonth();
-    
-    // if (current_Month <= 9) {
-    //     current_Month = "0"+current_Month;
-    // }
-    // var current_year = current_date.getFullYear();
-
-    // var date = current_year + "-" + current_Month + "-" + current_day;
-
-    // var start = document.getElementById('date-start');
-
-    // start.value = date;
-    // start.min = date;
+    var string_array = [];
+    var end_string = [];
 
     var todays_date = new Date();
-    var date_array = [];
-    var string_array = [];
-    var end_array = [];
-    var end_string = [];
     var EvenMonths = [0, 2, 4, 6, 7, 9, 11];
     var oddMonths = [3, 5, 8, 10]
 
@@ -55,6 +37,7 @@
     date_array[0] += 1;
 
     date_array.push(todays_date.getMonth());
+    date_array[1] += 1;
     
     date_array.push(todays_date.getUTCFullYear());
 
@@ -117,25 +100,38 @@
 
     date_end_input.min = end_string[2] + "-" + end_string[1] + "-" + end_string[0]; 
 
-};
-// function calc() {
-//     let start = document.getElementById('date-start').value;
-//     let end = document.getElementById('date-end').value;
+}
+function calc() {
+    var final_span = document.getElementById('final');
 
-//     console.log(start);
+    var discount = 1;
 
-//     let start_value = start.split('-');
-//     let end_value = end.split('-');
+    var input_start = document.getElementById('date-start').value;
+    var calc_date_start = input_start.split("-");
 
-//     start_month = start_value[1]
+    var input_end = document.getElementById('date-end').value;
+    var calc_date_end = input_end.split("-");
 
-//     start_date = new Date(start_value[0], start_month, start_value[2])
-//     end_date = new Date(end_value[0], end_value[1], end_value[2])
+    var calc_start = new Date(calc_date_start)
+    var calc_end = new Date(calc_date_end)
 
-//     diff = end_date - start_date;
+    let date_difference = (calc_end - calc_start) / (1000 * 60 * 60 * 24);
 
-//     days = Math.ceil(diff / (1000 * 3600 * 24));
+    let date_difference_in_weeks = Math.ceil(date_difference / 7);
 
-//     console.log(days)
+    if (date_difference_in_weeks > 5) {
+        discount = 0.10;
+        console.log('rabat: ', discount)
+    }
+    if (date_difference_in_weeks > 10) {
+        discount = 0.15;
+        console.log('rabat: ', discount)
+    }
 
-//     }
+    let final_price = calc_cena * date_difference_in_weeks;
+
+    final_span.innerText = final_price + "zł";
+
+
+
+    }

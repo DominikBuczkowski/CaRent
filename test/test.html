@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="wypożyczalnia">
+    <meta name="keywords" content="wypożyczalnia samochodów, wypożyczalnia, samochodów">
+    <meta name="author" content="Dominik Buczkowski">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Wypożyczalnia</title>
+    <link rel="stylesheet" id="theme" href="style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="nouislider.css" rel="stylesheet">
+    <script src="nouislider.js"></script>
+    <script src="handle_filters.js"></script>
+    <script src="select_car.js" async></script>
+</script>
+
+</head>
+
+<body>
+
+    <main>
+        <section class="flota">
+            <button onclick="hide_car()" class="selected-car" id="HD1">
+                <div>
+                    
+                </div>
+            </button>
+            <div class="selected-car-item" id="HD2">
+
+                <div class="selected-car-info-cluster" onclick="calc()">
+                    <div class="selected-car-name" id="name">
+                        $MODEL
+                    </div>
+                    <div class="selected-car-image">
+                        <img src="img/cars/f40_1.png" alt="$img" id="img" width="720" height="250">
+                    </div>
+
+                    <div class="selected-car-type" id="type">
+                        $Typ
+                    </div>
+                    <div class="selected-car-info">
+                        <div class="selected-car-info-item" id="year">
+                            $rocznik
+                        </div>
+                        <div class="selected-car-info-item" id="seats">
+                            $miejsca
+                        </div>
+                        <div class="selected-car-info-item" id="gas">
+                            $benzyna
+                        </div>
+                        <div class="selected-car-info-item" id="hp">
+                            $konie
+                        </div>
+                        <div class="selected-car-info-item" id="cena">
+                            $cena
+                        </div>
+                    </div>
+                    <div class="calculator">
+                        <div class="calc-label-cluster">
+
+                            <div class="calc-label">
+                                <h3>Data wypożyczenia</h3>
+                            </div>
+                            
+                            <div class="calc-label">
+                                <h3>Data zwrotu</h3>
+                            </div>
+                            
+                        </div>
+                    
+                        <div class="calc-top">
+                            <div class="data-input">
+                                <input type="date" min="" id="date-start" value="" oninput="calc()">
+                            </div>
+                            <div class="data-input">
+                            <input type="date" min="" id="date-end" value="" oninput="calc()">
+                            </div>
+
+                            
+                        </div>
+                        <div class="calc-cost">
+                            <span id="final">11111zl</span>
+                            <span class="disc"><s id="discount">22222zl</s></span>
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+
+            </div>
+        
+
+        </section>
+
+    </main>
+</body>
+</html>
