@@ -81,18 +81,21 @@ const theme_button = document.getElementById('theme_button');
 theme_button.addEventListener("click", () => {
 
     let css = document.getElementById('theme');
+    let slider = document.getElementById('slider-theme');
     let solar = document.getElementById('solar');
     let logo = document.getElementById('logo');
 
     if (css.href === "http://127.0.0.1:5500/styles/style.css") {
 
         css.href = 'styles/style-white.css';
+        slider.href = 'nouislider-white.css';
         logo.src = '/img/nav_logo-dark.png';
         solar.classList = 'fa-solid fa-moon';
     }
     else if (css.href === "http://127.0.0.1:5500/styles/style-white.css") {
 
         css.href = 'styles/style.css';
+        slider.href = 'nouislider.css';
         logo.src = '/img/nav_logo.png';
         solar.classList = 'fa-solid fa-sun';
 

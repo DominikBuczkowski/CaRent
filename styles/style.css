@@ -639,11 +639,12 @@ h4 {
 }
 .gas-box {
     width: calc(20% - 30px);
-    height: 100px;
+    height: 80px;
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
     flex-wrap: wrap;
+    border-left: 2px solid black;
     justify-content: space-evenly;
     font-size: 100%;
 
