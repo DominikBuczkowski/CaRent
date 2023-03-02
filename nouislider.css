@@ -292,25 +292,3 @@
   right: 28px;
 }
 
-
-/* O NAS */
-
-.aboutus-container {
-  width: calc(100% - 50px);
-  height: calc(1200px - 50px);
-  padding: 25px;
-}
-.aboutus-header {
-  margin-top: 10px;
-  padding-top: 30px;
-  text-align: center;
-  width: 100%;
-  border-top: 1px solid black
-}
-.aboutus-article {
-  width: calc(80% - 80px);
-  margin: auto;
-  margin-top: 20px;
-  height: 250px;
-  padding: 40px;
-}
