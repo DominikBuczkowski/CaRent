@@ -836,4 +836,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     font-size: 80%;
     transform: translate(100%, -120%) rotate(-10deg);
+    color: #a349a4;
+}
+#final {
+    color: #00a2e8;
 }

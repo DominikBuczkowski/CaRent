@@ -4,6 +4,8 @@
     let end_array = [];
 
     function select(block) {
+        date_array = [];
+        end_array = [];
     var HD1 = document.getElementById('HD1');
     var HD2 = document.getElementById('HD2');
 
@@ -23,7 +25,7 @@
     HD1.classList.replace('selected-car-hidden', 'selected-car');
     HD2.classList.replace('selected-car-item-hidden','selected-car-item');
 
-    document.getElementById('final').innerText = info[9];
+    document.getElementById('final').innerText = info[9] + "zł";
 
 
     var string_array = [];
@@ -85,9 +87,14 @@
 
     end_array.push((date_array[0] + 7), date_array[1], date_array[2]);
     
+    console.log(end_array)
+    
 
     if (end_array[0] <= 9) {
         end_string.push("0" + end_array[0])
+    }
+    else {
+        end_string.push(String(end_array[0]))
     }
     if (end_array[1] <= 9) {
         end_string.push("0" + end_array[1])
@@ -100,9 +107,12 @@
 
     date_end_input.min = end_string[2] + "-" + end_string[1] + "-" + end_string[0]; 
 
+    calc();
+
 }
 function calc() {
     var final_span = document.getElementById('final');
+    var discount_span = document.getElementById('discount');
 
     var discount = 1;
 
@@ -119,19 +129,39 @@ function calc() {
 
     let date_difference_in_weeks = Math.ceil(date_difference / 7);
 
-    if (date_difference_in_weeks > 5) {
+    if (date_difference_in_weeks > 3) {
         discount = 0.10;
         console.log('rabat: ', discount)
+
+        let final_price = calc_cena * date_difference_in_weeks;
+
+        discounted_price = final_price - (final_price * discount);
+
+        discount_span.innerText = final_price + "zł";
+
+        final_span.innerText = discounted_price + "zł";
+
     }
-    if (date_difference_in_weeks > 10) {
+    else if (date_difference_in_weeks > 8) {
         discount = 0.15;
         console.log('rabat: ', discount)
+
+        let final_price = calc_cena * date_difference_in_weeks;
+
+        discounted_price = final_price - (final_price * discount);
+
+        discount_span.innerText = final_price + "zł";
+
+        final_span.innerText = discounted_price + "zł";
+
+    }
+    else {
+        let final_price = calc_cena * date_difference_in_weeks;
+
+        discount_span.innerText = "";
+
+        final_span.innerText = final_price + "zł";
+        
     }
 
-    let final_price = calc_cena * date_difference_in_weeks;
-
-    final_span.innerText = final_price + "zł";
-
-
-
-    }
+}
