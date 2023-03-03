@@ -83,8 +83,12 @@ footer {
     z-index: 100;
     transition: all 0.4s;
 }
-.nav-alt > .nav-button-cluster {
-    display: none;;
+.nav-alt > .button-cluster {
+    display: none;
+
+}
+.nav-alt > .nav-small-button {
+    display: none;
 }
 .button-cluster {
     width: 20%;
@@ -908,4 +912,38 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: 1px solid white;
     transform: rotate(30deg);
     font-size: 200%;
+}
+
+/* KONTAKT */
+
+.kontakt-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 1200px;
+}
+
+.email-form {
+    width: 40%;
+    background-color: rgb(194, 194, 194);
+}
+.email-form h2,h3 {
+    margin-top: 15px;
+}
+.email-form-title {
+    width: 100%;
+    text-align: center;
+}
+.email-form-cluster {
+    width: 90%;
+    margin: auto;
+}
+.email-form-cluster {
+    font-size: 120%;
+}
+.email-form-cluster > input {
+    width: 50%;
+    height: 40px;
+    margin-top: 10px;
 }
