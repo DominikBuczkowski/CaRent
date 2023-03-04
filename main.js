@@ -122,3 +122,19 @@ filter_button.addEventListener("click", () => {
     }
 
 });
+
+// var check_anon = document.getElementById('email-aa');
+// check_anon.addEventListener('click', () => {
+
+//     var anon = document.getElementById('anon');
+
+//     if (check_anon.checked === true) {
+//         console.log('checked');
+//         console.log(anon.classList)
+//     }
+//     if (check_anon.checked === false) {
+//         console.log('unchecked');
+//     }
+
+// })
+

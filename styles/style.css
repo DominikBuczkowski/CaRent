@@ -959,7 +959,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-evenly;
 }
 
-#email-name > input {
+#name_input {
+    width: 30%;
+    font-size: 110%;
+    padding: 15px;
+}
+#lastname_input {
     width: 30%;
     font-size: 110%;
     padding: 15px;
@@ -971,6 +976,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     font-size: 170%;
     width: 20%;
+    
     
 }
 @keyframes jump {
@@ -1010,5 +1016,18 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
     background-color: rgb(161, 161, 161);
+    transition: 0.4s;
+}
+.email-anon {
+    width: 10px;
+    position: absolute;
+    transform: translateY(15px);
+    background-color: red;
+    opacity: 0;
+}
+#email-aa {
+    width: 5%;
+}
+i {
     transition: 0.4s;
 }

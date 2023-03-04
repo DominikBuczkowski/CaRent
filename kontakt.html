@@ -18,6 +18,7 @@
     <script src="nouislider.js"></script>
     <script src="handle_filters.js"></script>
     <script src="select_car.js" async></script>
+    <script src="main.js"></script>
 </script>
 
 </head>
@@ -86,19 +87,43 @@
         <section class="kontakt-container">
             
            <div class="email-sec">
-                <form>
+                <form action="email.php" method="post">
                     <h2>Masz pytanie?</h2>
                     </br>
                     <h3>Napisz do nas!</h3>
 
                     <div class="email-cluster">
                         <div class="email-box" id="email-name">
-                            <input type="text" name="name" placeholder="Imie">
+                            <input type="text" name="name" placeholder="Imie" id="name_input">
 
-                            <!-- <i class="fa-solid fa-circle-info"></i> -->
-                            <i class="fa-regular fa-circle-info"></i>
+                            <i class="fa-regular fa-circle-info" id="anon" title="Kliknij aby wysłać anonimowo"></i>
 
-                            <input type="text" name="lastname" placeholder="Nazwisko">
+                            <input type="checkbox" class="email-anon" id="email-aa" name="anon_check"
+title="Kliknij aby wysłać anonimowo"
+                            onclick="
+                            var i = document.getElementById('anon');
+                            var name_input = document.getElementById('name_input');
+                            var lastname_input = document.getElementById('lastname_input');
+
+                            if (this.checked === true) {
+                                i.classList.replace('fa-regular', 'fa-solid');
+                                i.style.color = 'green';
+                                name_input.value = 'Anonim';
+                                lastname_input.value = 'Anonim';
+                                name_input.disabled = true;
+                                lastname_input.disabled = true;
+                            }
+                            else if (this.checked === false) {
+                                i.classList.replace('fa-solid', 'fa-regular')
+                                i.style.color = 'black';
+                                name_input.value = '';
+                                lastname_input.value = '';
+                                name_input.disabled = false;
+                                lastname_input.disabled = false;
+                            }
+                            ">
+
+                            <input type="text" name="lastname" placeholder="Nazwisko" id="lastname_input">
                         </div>
 
                         <div class="email-box" id="email-email">
@@ -149,11 +174,11 @@
             </div>
         </div>
         <div class="footer-lower">
-            CaRent 	&#174;
+            CaRent 	®
         </div>
 
     </footer>
-    <script src="main.js"></script>
+
     <script src="download_files.js"></script>
 </body>
 </html>
