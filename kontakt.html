@@ -84,26 +84,42 @@
             <h1>Kontakt</h1>
         </header>
         <section class="kontakt-container">
-            <div class="email-form">
-                <div class="email-form-title">
-                    <h2>
-                        Masz pytanie?
-                    </h2>
-                    <h3>
-                        Napisz do nas!
-                    </h3>
-                </div>
-                <div class="email-form-cluster">
-                    <label for="email">Twój Email: </label>
+            
+           <div class="email-sec">
+                <form>
+                    <h2>Masz pytanie?</h2>
                     </br>
-                    <input type="email" name="email">
-                </div>
-                
-            </div>
-            <div class="email-form">
+                    <h3>Napisz do nas!</h3>
 
-                aa
-            </div>
+                    <div class="email-cluster">
+                        <div class="email-box" id="email-name">
+                            <input type="text" name="name" placeholder="Imie">
+
+                            <!-- <i class="fa-solid fa-circle-info"></i> -->
+                            <i class="fa-regular fa-circle-info"></i>
+
+                            <input type="text" name="lastname" placeholder="Nazwisko">
+                        </div>
+
+                        <div class="email-box" id="email-email">
+                            <input type="email" placeholder="E-mail" name="email">
+                        </div>
+
+                        <div class="email-box" id="email-text">
+                            <textarea placeholder="Treść" id="email-textarea" wrap="soft" name="tresc"></textarea>
+                        </div>
+
+                        <div class="email-box" id="email-submit">
+                            <input type="submit" value="Wyślij">
+                        </div>
+                    </div>
+                </form>
+           </div>
+
+           <div class="email-sec">
+            FAQ
+       </div>
+           
             
         </section>
     </main>
