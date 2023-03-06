@@ -15,11 +15,9 @@ button {
     background-color: red;
     
 }
-
-#f1 {
+.fish {
     position: absolute;
     width: 300px;
-    right: 15px;
     /* transform: translate(250px, 250px); */
-    transform: rotateY(180deg);
+    
 }
