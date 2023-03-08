@@ -1,7 +1,7 @@
 
 var max_dimensions = []
 
-const container = document.getElementById('container');
+const container = document.getElementById('fish_container');
 
 max_dimensions.push(container.offsetWidth, container.offsetHeight)
 
@@ -49,6 +49,8 @@ function ryb1() {
     fish1.style.top = fish1_startY + "px";
 
     
+
+    
     
 
     let flip_left = "rotateY(180deg)"
@@ -59,7 +61,6 @@ function ryb1() {
 
 
     let timer = setInterval(function() {
-
 
         if (dir1X == "right") {
             X_movement = X_movement + speed;
@@ -97,11 +98,12 @@ function ryb1() {
         }
         
 
-        if ((Y_movement + 100) > max_dimensions[1]) {
+        if ((Y_movement + 10) > max_dimensions[1]) {
             dir1Y = "top";
         }
-        else if (Y_movement == 10) {
+        else if (Y_movement == 150) {
             dir1Y = "down";
+            console.log(Y_movement, 'touch')
         }
 
 
@@ -151,8 +153,8 @@ function ryb2() {
         dir2Y = "bottom";
     }
 
-    let flip_left = "rotateY(180deg)"
-    let flip_right = "rotateY(0deg)"
+    let flip_left = "rotateY(180deg),  "
+    let flip_right = "rotateY(0deg),  "
 
 
     let timer = setInterval(function() {
@@ -174,7 +176,7 @@ function ryb2() {
         }
         
 
-        if ((X_2movement + 310) > max_dimensions[0]) {
+        if ((X_2movement +  310) > max_dimensions[0]) {
             dir2X = "left";
 
         }
@@ -197,8 +199,9 @@ function ryb2() {
         if ((Y_2movement + 100) > max_dimensions[1]) {
             dir2Y = "top";
         }
-        else if (Y_2movement == 10) {
+        else if (Y_2movement == 150) {
             dir2Y = "down";
+            console.log(Y_2movement, 'touch')
         }
 
 
@@ -249,8 +252,8 @@ function ryb3() {
         dir3Y = "bottom";
     }
 
-    let flip_left = "rotateY(0deg)"
-    let flip_right = "rotateY(180deg)"
+    let flip_left = "rotateY(0deg),  "
+    let flip_right = "rotateY(180deg),  "
 
 
     let timer = setInterval(function() {
@@ -295,8 +298,9 @@ function ryb3() {
         if ((Y_3movement + 100) > max_dimensions[1]) {
             dir3Y = "top";
         }
-        else if (Y_3movement == 10) {
+        else if (Y_3movement == 150) {
             dir3Y = "down";
+            console.log(Y_3movement, 'touch')
         }
 
 
@@ -346,8 +350,8 @@ function ryb4() {
         dir4Y = "bottom";
     }
 
-    let flip_left = "rotateY(0deg)"
-    let flip_right = "rotateY(180deg)"
+    let flip_left = "rotateY(0deg),  "
+    let flip_right = "rotateY(180deg),  "
 
 
     let timer = setInterval(function() {
@@ -392,8 +396,9 @@ function ryb4() {
         if ((Y_4movement + 100) > max_dimensions[1]) {
             dir4Y = "top";
         }
-        else if (Y_4movement == 10) {
+        else if (Y_4movement == 150) {
             dir4Y = "down";
+            console.log(Y_4movement, 'touch')
         }
 
 

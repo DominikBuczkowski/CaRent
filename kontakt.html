@@ -18,67 +18,69 @@
     <script src="nouislider.js"></script>
     <script src="handle_filters.js"></script>
     <script src="select_car.js" async></script>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
+    <script src="contact-form.js" defer></script>
 </script>
 
 </head>
     
-    <nav class="nav" id="nav">
+<nav class="nav" id="nav">
 
-        <div class="button-cluster">
-            <a href="osobowe.html" class="nav-button">
-                <div>
-                    Osobowe
-                </div>
-            </a>
+    <div class="button-cluster">
+        <a href="osobowe.html" class="nav-button">
+            <div>
+                Osobowe
+            </div>
+        </a>
 
-            <a href="ciezarowe.html" class="nav-button">
-                <div>
-                    Ciężarowe
-                </div>
-            </a>
-            
-        </div>
-
-        <div class="nav-small-button">
-            <button class="nav-small" id="theme_button">
-                <i id="solar" class="fa-solid fa-moon"></i>
-            </button>
-            <button class="nav-small" id="fish_button">
-                <i class="fa-regular fa-fish"></i>
-            </button>
-        </div>
-
-        <div class="nav-logo-cluster">
+        <a href="ciezarowe.html" class="nav-button">
+            <div>
+                Ciężarowe
+            </div>
+        </a>
         
-            <a href="index.html">
-                <img src="/img/nav_logo.png" height="45" alt="logo" id="logo">
-            </a>
+    </div>
 
-            <div class="rect" id="diamond" onclick="ScrollToTop()"></div>
+    <div class="nav-small-button">
+        <button class="nav-small" id="theme_button">
+            <i id="solar" class="fa-solid fa-moon"></i>
+        </button>
+        <button class="nav-small" id="fish_button">
+            <i class="fa-regular fa-fish"></i>
+        </button>
+    </div>
+
+    <div class="nav-logo-cluster">
+    
+        <a href="index.html">
+            <img src="/img/nav_logo.png" height="45" alt="logo" id="logo">
+        </a>
+
+        <div class="rect" id="diamond" onclick="ScrollToTop()"></div>
+    
+    </div>
+
+    <div class="nav-small-button">
         
-        </div>
+    </div>
 
-        <div class="nav-small-button">
-            
-        </div>
+    <div class="button-cluster">
+        <a href="kontakt.html" class="nav-button">
+            <div>
+                Kontakt
+            </div>
+        </a>
 
-        <div class="button-cluster">
-            <a href="kontakt.html" class="nav-button">
-                <div>
-                    Kontakt
-                </div>
-            </a>
-
-            <a href="onas.html" class="nav-button">
-                <div>
-                    O nas
-                </div>
-            </a>
-            
-        </div>
+        <a href="onas.html" class="nav-button">
+            <div>
+                O nas
+            </div>
+        </a>
         
+    </div>
+    
     </nav>
+
     
     <main>
         <header class="space">
@@ -86,7 +88,7 @@
         </header>
         <section class="kontakt-container">
             
-           <div class="email-sec">
+           <article class="email-sec" id="email-form">
                 <form action="email.php" method="post">
                     <h2>Masz pytanie?</h2>
                     </br>
@@ -99,29 +101,8 @@
                             <i class="fa-regular fa-circle-info" id="anon" title="Kliknij aby wysłać anonimowo"></i>
 
                             <input type="checkbox" class="email-anon" id="email-aa" name="anon_check"
-title="Kliknij aby wysłać anonimowo"
-                            onclick="
-                            var i = document.getElementById('anon');
-                            var name_input = document.getElementById('name_input');
-                            var lastname_input = document.getElementById('lastname_input');
-
-                            if (this.checked === true) {
-                                i.classList.replace('fa-regular', 'fa-solid');
-                                i.style.color = 'green';
-                                name_input.value = 'Anonim';
-                                lastname_input.value = 'Anonim';
-                                name_input.disabled = true;
-                                lastname_input.disabled = true;
-                            }
-                            else if (this.checked === false) {
-                                i.classList.replace('fa-solid', 'fa-regular')
-                                i.style.color = 'black';
-                                name_input.value = '';
-                                lastname_input.value = '';
-                                name_input.disabled = false;
-                                lastname_input.disabled = false;
-                            }
-                            ">
+                            title="Kliknij aby wysłać anonimowo"
+                            onclick="anonymous_button(this)">
 
                             <input type="text" name="lastname" placeholder="Nazwisko" id="lastname_input">
                         </div>
@@ -139,11 +120,41 @@ title="Kliknij aby wysłać anonimowo"
                         </div>
                     </div>
                 </form>
-           </div>
+           </article>
 
-           <div class="email-sec">
-            FAQ
-       </div>
+           <article class="email-sec" id="FAQ">
+            <header>
+                <h2>FAQ</h2>
+                <h3>Najczęsciej zadawane pytania</h4>
+            </header>
+
+            <div class="FAQ-cluster">
+                <div class="FAQ-question">
+                    <strong>
+                        Question 1?
+                    </strong>
+                </div>
+                <div class="FAQ-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                </div>
+            </div>
+
+            <div class="FAQ-cluster">
+                <div class="FAQ-question">
+                    <strong>
+                        Question 2?
+                    </strong>
+                </div>
+                <div class="FAQ-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                </div>
+            </div>
+            <div class="FAQ-footer">
+                Nie znalazłeś odpowiedzi na nurtujące Ciebie pytanie?
+                <br>
+                <button href="javascript:void" onclick="scrollToForm()">Kliknij tutaj aby zadać</button>
+            </div>
+       </article>
            
             
         </section>
