@@ -23,6 +23,10 @@ function ryb1() {
     fish1_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish1_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
 
+    while(fish1_startY < 150) {
+        fish1_startY = fish1_startY + (fish1_startX / 2);
+    }
+
     let dir1_randomX = Math.floor(Math.random() * (3 - 1)) + 1;
     let dir1_randomY = Math.floor(Math.random() * (3 - 1)) + 1;
 
@@ -40,7 +44,6 @@ function ryb1() {
         dir1Y = "bottom";
     }
 
-    console.log(dir1_randomX)
 
     let speed = Math.floor(Math.random() * (2 - 1) + 1);
 
@@ -103,7 +106,6 @@ function ryb1() {
         }
         else if (Y_movement == 150) {
             dir1Y = "down";
-            console.log(Y_movement, 'touch')
         }
 
 
@@ -123,8 +125,13 @@ function ryb2() {
 
     let fish2 = document.getElementById('fish2');
 
-    fish2_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
-    fish2_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
+    fish2_startX = Math.floor(Math.random() * (max_dimensions[0] - 350)) + 1;
+    fish2_startY = Math.floor(Math.random() * (max_dimensions[1] - 350)) + 1;
+
+    while(fish2_startY < 150) {
+        fish2_startY = fish2_startY + (fish1_startX / 2);
+    }
+    
 
     let X_2movement = fish2_startX
     let Y_2movement = fish2_startY
@@ -201,7 +208,6 @@ function ryb2() {
         }
         else if (Y_2movement == 150) {
             dir2Y = "down";
-            console.log(Y_2movement, 'touch')
         }
 
 
@@ -223,6 +229,11 @@ function ryb3() {
     fish3_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish3_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
 
+    while(fish3_startY < 150) {
+        fish3_startY = fish3_startY + (fish3_startX / 2);
+    }
+
+
     let X_3movement = fish3_startX
     let Y_3movement = fish3_startY
     
@@ -236,7 +247,6 @@ function ryb3() {
     let dir3_randomX = Math.floor(Math.random() * (3 - 1)) + 1;
     let dir3_randomY = Math.floor(Math.random() * (3 - 1)) + 1;
 
-    console.log(dir3_randomX, dir3_randomY)
 
     if (dir3_randomX == 1) {
         dir3X = "right";
@@ -300,7 +310,6 @@ function ryb3() {
         }
         else if (Y_3movement == 150) {
             dir3Y = "down";
-            console.log(Y_3movement, 'touch')
         }
 
 
@@ -322,6 +331,10 @@ function ryb4() {
 
     fish4_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish4_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
+
+    while(fish4_startY < 150) {
+        fish4_startY = fish4_startY + (fish4_startX / 2);
+    }
 
     let X_4movement = fish4_startX
     let Y_4movement = fish4_startY
@@ -398,7 +411,6 @@ function ryb4() {
         }
         else if (Y_4movement == 150) {
             dir4Y = "down";
-            console.log(Y_4movement, 'touch')
         }
 
 
@@ -413,3 +425,41 @@ function ryb4() {
 }
 
 
+
+    var fish_button = document.getElementById('fish_button')
+    var check_fish_container = document.getElementById('fish_container');
+    var check_fish_b = document.getElementById('fish_b');
+
+    var orbit_holder = document.getElementById('orbit-holder');
+
+    fish_button.addEventListener('click', () => {
+        if (
+            (check_fish_container.style.display == 'block')
+             && 
+            (check_fish_b.style.display == 'block')
+
+            ) {
+                orbit_holder.style.display = 'block';
+                check_fish_container.style.display = 'none';
+                check_fish_b.style.display = 'none';
+        }
+        else if (
+            (check_fish_container.style.display == 'none')
+             && 
+            (check_fish_b.style.display == 'none')
+            &&
+            (check_fish_container.style.display !== 'block')
+             && 
+            (check_fish_b.style.display !== 'block')
+            ) {
+                orbit_holder.style.display = 'none';
+                check_fish_container.style.display = 'block';
+                check_fish_b.style.display = 'block';
+               setTimeout(() => {
+                ryb4()
+                console.log('started')
+               }, 1000)
+               console.log('waiting')
+        }
+
+    })
