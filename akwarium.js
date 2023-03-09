@@ -23,9 +23,6 @@ function ryb1() {
     fish1_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish1_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
 
-    while(fish1_startY < 150) {
-        fish1_startY = fish1_startY + (fish1_startX / 2);
-    }
 
     let dir1_randomX = Math.floor(Math.random() * (3 - 1)) + 1;
     let dir1_randomY = Math.floor(Math.random() * (3 - 1)) + 1;
@@ -128,10 +125,6 @@ function ryb2() {
     fish2_startX = Math.floor(Math.random() * (max_dimensions[0] - 350)) + 1;
     fish2_startY = Math.floor(Math.random() * (max_dimensions[1] - 350)) + 1;
 
-    while(fish2_startY < 150) {
-        fish2_startY = fish2_startY + (fish1_startX / 2);
-    }
-    
 
     let X_2movement = fish2_startX
     let Y_2movement = fish2_startY
@@ -229,9 +222,6 @@ function ryb3() {
     fish3_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish3_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
 
-    while(fish3_startY < 150) {
-        fish3_startY = fish3_startY + (fish3_startX / 2);
-    }
 
 
     let X_3movement = fish3_startX
@@ -329,15 +319,20 @@ function ryb4() {
 
     let fish4 = document.getElementById('fish4');
 
+
     fish4_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish4_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
 
-    while(fish4_startY < 150) {
-        fish4_startY = fish4_startY + (fish4_startX / 2);
-    }
+
+
+    // if (fish4_startY < 150) {
+    //     fish4_startY = fish4_startY + (fish4_startX / 2);
+    // }
+
 
     let X_4movement = fish4_startX
     let Y_4movement = fish4_startY
+
     
 
     let speed4 = Math.floor(Math.random() * (2 - 1) + 1);
@@ -345,6 +340,7 @@ function ryb4() {
 
     fish4.style.left = fish4_startX + "px";
     fish4.style.top = fish4_startY + "px";
+
 
     let dir4_randomX = Math.floor(Math.random() * (3 - 1)) + 1;
     let dir4_randomY = Math.floor(Math.random() * (3 - 1)) + 1;
@@ -424,8 +420,6 @@ function ryb4() {
     
 }
 
-
-
     var fish_button = document.getElementById('fish_button')
     var check_fish_container = document.getElementById('fish_container');
     var check_fish_b = document.getElementById('fish_b');
@@ -456,10 +450,11 @@ function ryb4() {
                 check_fish_container.style.display = 'block';
                 check_fish_b.style.display = 'block';
                setTimeout(() => {
-                ryb4()
+                ryby();
                 console.log('started')
-               }, 1000)
+               }, 1)
                console.log('waiting')
+            // ryby();
         }
 
     })
