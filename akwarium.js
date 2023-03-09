@@ -1,14 +1,10 @@
-
-var max_dimensions = []
-
-const container = document.getElementById('fish_container');
-
-max_dimensions.push(container.offsetWidth, container.offsetHeight)
-
-
-
+var canc = false
+var max_dimensions = [];
 
 var ryby = () => {
+    const container = document.getElementById('fish_container');
+    max_dimensions.push(container.offsetWidth, container.offsetHeight);
+
     ryb1();
     ryb2();
     ryb3();
@@ -17,12 +13,14 @@ var ryby = () => {
 
 function ryb1() {
 
-
     let fish1 = document.getElementById('fish1');
 
     fish1_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish1_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
 
+    while(fish1_startY < 150) {
+        fish1_startY = fish1_startY + (fish1_startX / 2);
+    }
 
     let dir1_randomX = Math.floor(Math.random() * (3 - 1)) + 1;
     let dir1_randomY = Math.floor(Math.random() * (3 - 1)) + 1;
@@ -48,17 +46,11 @@ function ryb1() {
     fish1.style.left = fish1_startX + "px";
     fish1.style.top = fish1_startY + "px";
 
-    
+    let flip_left = "rotateY(180deg)";
+    let flip_right = "rotateY(0deg)";
 
-    
-    
-
-    let flip_left = "rotateY(180deg)"
-    let flip_right = "rotateY(0deg)"
-
-    let X_movement = fish1_startX
-    let Y_movement = fish1_startY
-
+    let X_movement = fish1_startX;
+    let Y_movement = fish1_startY;
 
     let timer = setInterval(function() {
 
@@ -87,9 +79,6 @@ function ryb1() {
 
         }
 
-
-
-
         if (dir1Y == "down") {
             Y_movement = Y_movement + speed;
         }
@@ -97,7 +86,6 @@ function ryb1() {
             Y_movement = Y_movement - speed;
         }
         
-
         if ((Y_movement + 10) > max_dimensions[1]) {
             dir1Y = "top";
         }
@@ -105,33 +93,28 @@ function ryb1() {
             dir1Y = "down";
         }
 
-
         fish1.style.left = X_movement + "px";
         fish1.style.top = Y_movement + "px";
 
-
-    
     }, 1);
-
     
 }
 
-
 function ryb2() {
-
 
     let fish2 = document.getElementById('fish2');
 
     fish2_startX = Math.floor(Math.random() * (max_dimensions[0] - 350)) + 1;
     fish2_startY = Math.floor(Math.random() * (max_dimensions[1] - 350)) + 1;
 
+    while(fish2_startY < 150) {
+        fish2_startY = fish2_startY + (fish2_startX / 2);
+    }
 
-    let X_2movement = fish2_startX
-    let Y_2movement = fish2_startY
-
+    let X_2movement = fish2_startX;
+    let Y_2movement = fish2_startY;
 
     let speed2 = Math.floor(Math.random() * (2 - 1) + 1);
-
 
     fish2.style.left = fish2_startX + "px";
     fish2.style.top = fish2_startY + "px";
@@ -153,12 +136,10 @@ function ryb2() {
         dir2Y = "bottom";
     }
 
-    let flip_left = "rotateY(180deg),  "
-    let flip_right = "rotateY(0deg),  "
-
+    let flip_left = "rotateY(180deg)";
+    let flip_right = "rotateY(0deg)";
 
     let timer = setInterval(function() {
-
 
         if (dir2X == "right") {
             X_2movement = X_2movement + speed2;
@@ -175,7 +156,6 @@ function ryb2() {
             
         }
         
-
         if ((X_2movement +  310) > max_dimensions[0]) {
             dir2X = "left";
 
@@ -185,9 +165,6 @@ function ryb2() {
 
         }
 
-
-
-
         if (dir2Y == "down") {
             Y_2movement = Y_2movement + speed2;
         }
@@ -195,7 +172,6 @@ function ryb2() {
             Y_2movement = Y_2movement - speed2;
         }
         
-
         if ((Y_2movement + 100) > max_dimensions[1]) {
             dir2Y = "top";
         }
@@ -203,40 +179,34 @@ function ryb2() {
             dir2Y = "down";
         }
 
-
         fish2.style.left = X_2movement + "px";
         fish2.style.top = Y_2movement + "px";
 
-
-    
     }, 1);
-
     
 }
 
 function ryb3() {
-
 
     let fish3 = document.getElementById('fish3');
 
     fish3_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish3_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
 
+    while(fish3_startY < 150) {
+        fish3_startY = fish3_startY + (fish3_startX / 2);
+    }
 
-
-    let X_3movement = fish3_startX
-    let Y_3movement = fish3_startY
-    
+    let X_3movement = fish3_startX;
+    let Y_3movement = fish3_startY;
 
     let speed3 = Math.floor(Math.random() * (2 - 1) + 1);
-
 
     fish3.style.left = fish3_startX + "px";
     fish3.style.top = fish3_startY + "px";
 
     let dir3_randomX = Math.floor(Math.random() * (3 - 1)) + 1;
     let dir3_randomY = Math.floor(Math.random() * (3 - 1)) + 1;
-
 
     if (dir3_randomX == 1) {
         dir3X = "right";
@@ -252,12 +222,10 @@ function ryb3() {
         dir3Y = "bottom";
     }
 
-    let flip_left = "rotateY(0deg),  "
-    let flip_right = "rotateY(180deg),  "
-
+    let flip_left = "rotateY(0deg)";
+    let flip_right = "rotateY(180deg)";
 
     let timer = setInterval(function() {
-
 
         if (dir3X == "right") {
             X_3movement = X_3movement + speed3;
@@ -274,7 +242,6 @@ function ryb3() {
             
         }
         
-
         if ((X_3movement + 310) > max_dimensions[0]) {
             dir3X = "left";
 
@@ -284,9 +251,6 @@ function ryb3() {
 
         }
 
-
-
-
         if (dir3Y == "down") {
             Y_3movement = Y_3movement + speed3;
         }
@@ -294,7 +258,6 @@ function ryb3() {
             Y_3movement = Y_3movement - speed3;
         }
         
-
         if ((Y_3movement + 100) > max_dimensions[1]) {
             dir3Y = "top";
         }
@@ -302,45 +265,31 @@ function ryb3() {
             dir3Y = "down";
         }
 
-
         fish3.style.left = X_3movement + "px";
         fish3.style.top = Y_3movement + "px";
-
-
     
     }, 1);
 
-    
 }
-
 
 function ryb4() {
 
-
     let fish4 = document.getElementById('fish4');
-
 
     fish4_startX = Math.floor(Math.random() * (max_dimensions[0] - 250)) + 1;
     fish4_startY = Math.floor(Math.random() * (max_dimensions[1] - 250)) + 1;
 
+    while(fish4_startY < 150) {
+        fish4_startY = fish4_startY + (fish4_startX / 2);
+    }
 
-
-    // if (fish4_startY < 150) {
-    //     fish4_startY = fish4_startY + (fish4_startX / 2);
-    // }
-
-
-    let X_4movement = fish4_startX
-    let Y_4movement = fish4_startY
-
-    
+    let X_4movement = fish4_startX;
+    let Y_4movement = fish4_startY;
 
     let speed4 = Math.floor(Math.random() * (2 - 1) + 1);
 
-
     fish4.style.left = fish4_startX + "px";
     fish4.style.top = fish4_startY + "px";
-
 
     let dir4_randomX = Math.floor(Math.random() * (3 - 1)) + 1;
     let dir4_randomY = Math.floor(Math.random() * (3 - 1)) + 1;
@@ -362,9 +311,7 @@ function ryb4() {
     let flip_left = "rotateY(0deg),  "
     let flip_right = "rotateY(180deg),  "
 
-
     let timer = setInterval(function() {
-
 
         if (dir4X == "right") {
             X_4movement = X_4movement + speed4;
@@ -381,7 +328,6 @@ function ryb4() {
             
         }
         
-
         if ((X_4movement + 310) > max_dimensions[0]) {
             dir4X = "left";
 
@@ -391,9 +337,6 @@ function ryb4() {
 
         }
 
-
-
-
         if (dir4Y == "down") {
             Y_4movement = Y_4movement + speed4;
         }
@@ -401,7 +344,6 @@ function ryb4() {
             Y_4movement = Y_4movement - speed4;
         }
         
-
         if ((Y_4movement + 100) > max_dimensions[1]) {
             dir4Y = "top";
         }
@@ -409,15 +351,11 @@ function ryb4() {
             dir4Y = "down";
         }
 
-
         fish4.style.left = X_4movement + "px";
         fish4.style.top = Y_4movement + "px";
 
-
-    
     }, 1);
 
-    
 }
 
     var fish_button = document.getElementById('fish_button')
@@ -436,6 +374,9 @@ function ryb4() {
                 orbit_holder.style.display = 'block';
                 check_fish_container.style.display = 'none';
                 check_fish_b.style.display = 'none';
+                canc
+
+                
         }
         else if (
             (check_fish_container.style.display == 'none')
@@ -445,16 +386,16 @@ function ryb4() {
             (check_fish_container.style.display !== 'block')
              && 
             (check_fish_b.style.display !== 'block')
-            ) {
+            )
+            {
                 orbit_holder.style.display = 'none';
                 check_fish_container.style.display = 'block';
                 check_fish_b.style.display = 'block';
                setTimeout(() => {
                 ryby();
-                console.log('started')
+                console.log('started');
                }, 1)
                console.log('waiting')
-            // ryby();
-        }
 
+            }
     })
