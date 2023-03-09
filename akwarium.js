@@ -4,11 +4,16 @@ var max_dimensions = [];
 var ryby = () => {
     const container = document.getElementById('fish_container');
     max_dimensions.push(container.offsetWidth, container.offsetHeight);
+    if(canc == true) {
+        return
+    }
+    else {
+        ryb1();
+        ryb2();
+        ryb3();
+        ryb4();
+    }
 
-    ryb1();
-    ryb2();
-    ryb3();
-    ryb4();
 }
 
 function ryb1() {
@@ -374,7 +379,7 @@ function ryb4() {
                 orbit_holder.style.display = 'block';
                 check_fish_container.style.display = 'none';
                 check_fish_b.style.display = 'none';
-                canc
+                canc = true;
 
                 
         }
