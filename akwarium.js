@@ -369,7 +369,10 @@ function ryb4() {
 
     var orbit_holder = document.getElementById('orbit-holder');
 
+    
+
     fish_button.addEventListener('click', () => {
+        var title = document.getElementById('space');
         if (
             (check_fish_container.style.display == 'block')
              && 
@@ -379,6 +382,7 @@ function ryb4() {
                 orbit_holder.style.display = 'block';
                 check_fish_container.style.display = 'none';
                 check_fish_b.style.display = 'none';
+                title.innerHTML = '<h1>Polecane</h1>';
                 canc = true;
 
                 
@@ -396,6 +400,7 @@ function ryb4() {
                 orbit_holder.style.display = 'none';
                 check_fish_container.style.display = 'block';
                 check_fish_b.style.display = 'block';
+                title.innerHTML = '<h1>Ryby</h1>';
                setTimeout(() => {
                 ryby();
                 console.log('started');

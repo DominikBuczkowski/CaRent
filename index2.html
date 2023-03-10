@@ -8,7 +8,7 @@
     <meta name="keywords" content="wypożyczalnia samochodów, wypożyczalnia, samochodów">
     <meta name="author" content="Dominik Buczkowski">
     <meta name="robots" content="noindex, nofollow">
-    <title>Wypożyczalnia</title>
+    <title>CaRent</title>
     <link rel="stylesheet" id="theme" href="styles/style.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,6 @@
     <script src="nouislider.js"></script>
     <script src="handle_filters.js" defer></script>
     <script src="select_car.js" async></script>
-    <script src="akwarium.js" defer></script>
-    <link rel="stylesheet" href="styles/akwarium.css">
 </script>
 
 </head>
@@ -84,30 +82,11 @@
 
     <main>
 
-        <div class="space">
+        <div class="space" id="space">
             <h1>Polecane</h1>
         </div>
 
         <section class="our-cars-cards">
-
-            <button onclick="ryby()" id="fish_b" style="display: none"></button>
-
-            <div id="fish_container" style="display: none">
-                <div class="fish" id="fish1">
-                    <img src="img/cars/e36_1.png">
-                </div>
-                <div class="fish" id="fish2">
-                    <img src="img/cars/touran_1.png">
-                </div>
-                <div class="fish" id="fish3">
-                    <img src="img/cars/polo_1.png">
-                </div>
-                <div class="fish" id="fish4">
-                    <img src="img/cars/citi_1.png">
-                </div>
-            </div>
-
-            <div class="orbit-holder" id="orbit-holder" style="display: block;">
 
             <div class="prev-button">
 
@@ -310,7 +289,11 @@
                 </div>
 
             </div>
-        </div>
+
+
+
+
+
 
 
 
@@ -501,9 +484,9 @@
 
                 <button onclick="download_regulamin()">Regulamin</button>
                     </br>
-                <button onclick="download_rodo()">rodo</button>
+                <button onclick="download_rodo()">Rodo</button>
                     </br>
-                <button onclick="download_dokumenty()">dokumenty</button>
+                <button onclick="download_dokumenty()">Dokumenty</button>
             </div>
             <div class="footer-block">
                 <a href="javascript:void()">O nas</a>
